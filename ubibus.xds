@@ -9,10 +9,10 @@
         "genTimestamps": false,
         "cacheBust": true
     },
-    "xdsVersion": "2.1.0",
-    "xdsBuild": 676,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000498,
+    "upgradeVersion": 210000000503,
     "framework": "touch20",
     "topInstanceFileMap": {
         "26a61378-13f8-4e59-b6da-51f99bf19d47": {
@@ -296,6 +296,38 @@
                 "app/model/Ocorrencia.js"
             ],
             "className": "Ocorrencia"
+        },
+        "73b043b0-d6d7-4d7e-a987-74e0df65495f": {
+            "paths": [
+                "metadata/view/InformarErro",
+                "app/view/override/InformarErro.js",
+                "app/view/InformarErro.js"
+            ],
+            "className": "InformarErro"
+        },
+        "74274cde-ca8b-480e-a134-6749694613fa": {
+            "paths": [
+                "metadata/view/MyNavigationView",
+                "app/view/override/MyNavigationView.js",
+                "app/view/MyNavigationView.js"
+            ],
+            "className": "MyNavigationView"
+        },
+        "0d004944-43ff-4271-b47a-c0c62d8e6327": {
+            "paths": [
+                "metadata/store/Usuarios",
+                "app/store/override/Usuarios.js",
+                "app/store/Usuarios.js"
+            ],
+            "className": "Usuarios"
+        },
+        "8af90382-8f20-4df5-87c3-18a60eb5b495": {
+            "paths": [
+                "metadata/model/Usuario",
+                "app/model/override/Usuario.js",
+                "app/model/Usuario.js"
+            ],
+            "className": "Usuario"
         }
     },
     "viewOrderMap": {
@@ -314,10 +346,12 @@
             "f3e8c1ce-e6c1-4f90-ba97-429bfee9d972",
             "edde6100-3a0e-452e-9af2-c6e186bb696b",
             "d5b66785-457c-417a-9a1b-c88965a4b3c4",
+            "73b043b0-d6d7-4d7e-a987-74e0df65495f",
             "41b284da-3521-44d8-80fd-b7ffa68aed19",
             "1befcf8c-4be9-4aa6-bfdc-976c736e4bc5",
             "46300fd9-0622-45d3-8439-fea9938e2087",
-            "70e0ec29-399d-48f4-b90b-6f44cae54c8a"
+            "70e0ec29-399d-48f4-b90b-6f44cae54c8a",
+            "74274cde-ca8b-480e-a134-6749694613fa"
         ],
         "store": [
             "634fd02c-608f-4940-8055-2167a75f84b0",
@@ -325,7 +359,8 @@
             "511d7166-8183-4614-b3d7-2da5e05e50ab",
             "4bd9c710-aff8-4f7c-924c-5b92ac88bf3d",
             "8d5c00cc-beb9-438e-a073-a278f8834c49",
-            "0e473bba-33c9-4c05-8def-b1074c50bc6c"
+            "0e473bba-33c9-4c05-8def-b1074c50bc6c",
+            "0d004944-43ff-4271-b47a-c0c62d8e6327"
         ],
         "controller": [
             "c254763d-7431-49c7-a395-7f62e3508904"
@@ -338,7 +373,8 @@
             "e355a4d7-6cc8-465e-949d-77241c66f7b0",
             "6c5ba7e8-18a6-4bdf-83fb-d6bbcf9b0ab8",
             "2cf64afe-96e1-4997-95b7-e04beec1311c",
-            "647a094f-ecdf-4b24-a568-81ef86f94d49"
+            "647a094f-ecdf-4b24-a568-81ef86f94d49",
+            "8af90382-8f20-4df5-87c3-18a60eb5b495"
         ],
         "resource": [
             "26a61378-13f8-4e59-b6da-51f99bf19d47",

@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "css",
         "url": "http://localhost/ubibus/estilos/styles.css"
     },
-    "id": "ExtBox1-ext-gen19875",
     "designerId": "9536cc36-2cf8-4f14-bc42-8df668ea3bd5"
 }

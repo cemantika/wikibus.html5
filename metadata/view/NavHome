@@ -1,5 +1,5 @@
 {
-    "type": "navigationview",
+    "type": "Ext.navigation.View",
     "reference": {
         "name": "items",
         "type": "array"
@@ -7,15 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "title": "Ubibus",
-        "designer|userClassName": "NavHome",
-        "designer|userAlias": "navhome",
         "html": null,
         "id": "home-view",
         "ui": "",
+        "designer|userClassName": "NavHome",
+        "designer|userAlias": "navhome",
         "defaultBackButtonText": "Voltar",
         "useTitleForBackButtonText": true
     },
-    "id": "ExtBox1-ext-gen47364",
     "designerId": "897564a4-fff6-4949-bfc6-2ca37d249238",
     "customConfigs": [
         {
@@ -36,23 +35,22 @@
                 "title": "Ubibus"
             },
             "designerId": "1dae0e83-8339-4e5c-a6bc-f982d782d7a8",
-            "masterInstanceId": "ExtBox1-ext-gen65731"
+            "masterInstanceId": "4fbd9467-ab3f-4876-8678-4f323eea7d98"
         },
         {
-            "type": "navigationbar",
+            "type": "Ext.navigation.Bar",
             "reference": {
                 "name": "navigationBar",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyNavigationBar",
                 "id": "navHomeBar"
             },
             "designerId": "7d1f8d05-1557-444b-907c-8c60e62c94d1",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -60,7 +58,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "designer|userClassName": "MyButton35",
                         "hidden": true,
                         "id": "btnNavConfig",
                         "itemId": "mybutton35",
@@ -79,7 +76,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onBtnNavConfigTap",
                                 "fn": "onBtnNavConfigTap",
                                 "implHandler": [
                                     "var tela = Ext.getCmp('home-view').getActiveItem().id;\r",
@@ -101,7 +97,7 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -109,7 +105,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "align": "right",
-                        "designer|userClassName": "MyButton36",
                         "hidden": true,
                         "id": "btnNavAdicionarEmpresa",
                         "itemId": "mybutton36",

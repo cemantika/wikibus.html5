@@ -5,6 +5,8 @@
         "type": "array"
     },
     "codeClass": null,
-    "id": "ExtBox1-ext-gen32134",
+    "userConfig": {
+        "designer|userClassName": "GoogleMapsAPI"
+    },
     "designerId": "5d2dbda8-023b-4e41-9ab2-8d4c1340f738"
 }

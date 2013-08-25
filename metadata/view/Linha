@@ -1,29 +1,27 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Linha",
-        "designer|userAlias": "linha",
         "id": "linhaView",
         "width": null,
+        "designer|userClassName": "Linha",
+        "designer|userAlias": "linha",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen12639",
     "designerId": "a5c5e745-8d8b-4388-a5c4-e60839876a0e",
     "cn": [
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar1",
                 "docked": "top",
                 "hidden": true,
                 "id": "toolbarLinha",
@@ -32,14 +30,13 @@
             "designerId": "957769d1-0e1b-4cb4-8bfd-05b997968460"
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet1",
                 "id": "fieldPesquisaLinha",
                 "padding": null,
                 "layout": null,
@@ -49,14 +46,13 @@
             "designerId": "0d0eeb52-247f-42eb-af5d-2451ef1bcadb",
             "cn": [
                 {
-                    "type": "searchfield",
+                    "type": "Ext.field.Search",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySearchField",
                         "id": "numeroLinha",
                         "itemId": null,
                         "label": null,
@@ -74,7 +70,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onMysearchfield1Clearicontap",
                                 "fn": "onMysearchfield1Clearicontap",
                                 "implHandler": [
                                     "//Limpa os campos do formulário\r",
@@ -92,14 +87,13 @@
             ]
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton4",
                 "id": "btnLinhaPesquisar",
                 "ui": "action",
                 "iconAlign": "center",

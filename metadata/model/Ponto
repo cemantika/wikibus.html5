@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,158 +9,146 @@
         "designer|userClassName": "Ponto",
         "designer|userAlias": "ponto"
     },
-    "id": "ExtBox1-ext-gen27691",
     "designerId": "72a7e285-6a60-413c-8920-da09e2ed4f35",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field9",
                 "name": "id_ponto",
                 "type": "int"
             },
             "designerId": "5d3fe20f-56d5-4643-bf61-bbe0969ec77d"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field10",
                 "name": "latitude",
                 "type": "float"
             },
             "designerId": "85429c76-3808-44ff-af30-9a140b7fd55b"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field11",
                 "name": "longitude",
                 "type": "float"
             },
             "designerId": "a9b3460c-7d47-4e8a-a728-63ac1fa59c55"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field12",
                 "name": "numero",
                 "type": "string"
             },
             "designerId": "31014ff5-eb49-4dd0-aa08-28a2bae262c0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field13",
                 "name": "logradouro",
                 "type": "string"
             },
             "designerId": "37129165-7487-43be-97e3-ac629ef28960"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field14",
                 "name": "bairro",
                 "type": "string"
             },
             "designerId": "1f63b7a0-e95c-4b8b-b664-8af33cf53917"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field15",
                 "name": "cidade",
                 "type": "string"
             },
             "designerId": "a7e1996a-c113-41af-a8e4-532886077cd9"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field16",
                 "name": "estado",
                 "type": "string"
             },
             "designerId": "99ab6971-060f-4f2d-bf6a-84a3ca78183a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field17",
                 "name": "pais",
                 "type": "string"
             },
             "designerId": "8787e93d-7957-448b-9660-34ba51b96998"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field18",
                 "name": "referencia",
                 "type": "string"
             },
             "designerId": "6eaa63ed-9607-495a-bc5a-1a1f8788280b"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field19",
                 "name": "cep",
                 "type": "string"
             },

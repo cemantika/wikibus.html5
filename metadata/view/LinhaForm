@@ -1,27 +1,25 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "linhaForm",
         "designer|userClassName": "LinhaForm",
-        "designer|userAlias": "linhaform",
-        "id": "linhaForm"
+        "designer|userAlias": "linhaform"
     },
-    "id": "ExtBox1-ext-gen15645",
     "designerId": "02c1b33e-41ec-480d-92af-a7b35ae590c2",
     "cn": [
         {
-            "type": "label",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLabel2",
                 "docked": null,
                 "html": "status da pesquisa",
                 "id": "lblLinhaStatusPesquisa",
@@ -30,33 +28,31 @@
             "designerId": "22916338-3360-488d-8e38-669cd7510c25"
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer",
                 "height": 5
             },
             "designerId": "49fd98bf-44e3-4f9f-bd76-f910c62d0a0f"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer",
                 "id": "formLinha"
             },
             "designerId": "77cbf9e9-5665-4913-8f10-d2ea6e297dd8",
             "cn": [
                 {
-                    "type": "segmentedbutton",
+                    "type": "Ext.SegmentedButton",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -65,7 +61,6 @@
                     "userConfig": {
                         "container|align": "center",
                         "container|pack": "center",
-                        "designer|userClassName": "MySegmentedButton",
                         "hidden": true,
                         "id": "opcoesLinha",
                         "itemId": "mysegmentedbutton1",
@@ -78,14 +73,13 @@
                     "designerId": "5d32bb91-c7ea-4d01-baa4-46d00b9391f8",
                     "cn": [
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnLinhaOcorrencia",
                                 "badgeText": "",
                                 "iconCls": "info",
@@ -95,14 +89,13 @@
                             "designerId": "c55d6c92-9afe-4266-95d7-b262e9a4b564"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton1",
                                 "hidden": true,
                                 "id": "btnLinhaLocalizacao",
                                 "iconCls": "locate",
@@ -112,14 +105,13 @@
                             "designerId": "a3c93e63-07ce-47d1-b645-8d8c736d40da"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton22",
                                 "hidden": true,
                                 "id": "btnLinhaHidden",
                                 "text": null
@@ -127,14 +119,13 @@
                             "designerId": "22a8ffb8-ea92-47c0-8e32-3c5ca7ab7e82"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnLinhaFavorito",
                                 "iconCls": "star",
                                 "iconMask": true,
@@ -143,14 +134,13 @@
                             "designerId": "11e5ac64-063f-4697-90d1-f0fd779d4c3d"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnLinhaEditar",
                                 "itemId": "mybutton10",
                                 "iconCls": "compose",
@@ -160,14 +150,13 @@
                             "designerId": "66d2b219-70a1-4f5d-a886-71b18809ba2e"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnLinhaDetalhe",
                                 "iconCls": "maps",
                                 "iconMask": true,
@@ -183,7 +172,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onOpcoesLinhaToggle",
                                 "fn": "onOpcoesLinhaToggle",
                                 "implHandler": [
                                     "//Variavel que habilita os campos do formulario apenas quando 'btnLinhaEditar' estiver ativo\r",
@@ -223,14 +211,13 @@
                     ]
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet",
                         "id": "infoLinha",
                         "defaults": [
                             "{disabled: false}"
@@ -241,14 +228,13 @@
                     "designerId": "eb4e6055-b1d2-4803-ba39-0a9fa271293c",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField",
                                 "disabled": true,
                                 "id": "txtNumeroLinha",
                                 "label": null,
@@ -259,14 +245,13 @@
                             "designerId": "54d85651-de37-445d-8248-ea38f9955aa3"
                         },
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField",
                                 "disabled": true,
                                 "id": "txtLinhaOrigem",
                                 "label": null,
@@ -277,14 +262,13 @@
                             "designerId": "dbdd36f2-286e-4313-9b3d-50c3bb0c6b4e"
                         },
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField",
                                 "disabled": true,
                                 "id": "txtLinhaDestino",
                                 "label": null,
@@ -295,14 +279,13 @@
                             "designerId": "e376bc8f-7860-4519-a245-b75f8d5b9705"
                         },
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField",
                                 "disabled": true,
                                 "id": "txtLinhaVia",
                                 "label": null,
@@ -315,14 +298,13 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton5",
                         "id": "btnSalvarLinha",
                         "style": "margin-top:-20px;",
                         "ui": "confirm",

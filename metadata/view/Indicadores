@@ -1,5 +1,5 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,18 +9,16 @@
         "designer|userClassName": "Indicadores",
         "designer|userAlias": "indicadores"
     },
-    "id": "ExtBox1-ext-gen88406",
     "designerId": "46300fd9-0622-45d3-8439-fea9938e2087",
     "cn": [
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar7",
                 "docked": "top",
                 "title": "Indicadores"
             },

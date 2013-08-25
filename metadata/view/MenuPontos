@@ -1,5 +1,5 @@
 {
-    "type": "actionsheet",
+    "type": "Ext.ActionSheet",
     "reference": {
         "name": "items",
         "type": "array"
@@ -12,7 +12,6 @@
         "hideOnMaskTap": true,
         "enter": "top"
     },
-    "id": "ExtBox1-ext-gen81450",
     "designerId": "1befcf8c-4be9-4aa6-bfdc-976c736e4bc5",
     "customConfigs": [
         {
@@ -23,107 +22,99 @@
     ],
     "cn": [
         {
-            "type": "titlebar",
+            "type": "Ext.TitleBar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTitleBar1",
                 "docked": "top",
                 "title": "Ponto já cadastrado:"
             },
             "designerId": "91893113-acf6-4a6b-90a7-afac19289dba"
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer9",
                 "height": 10
             },
             "designerId": "f98c556c-581d-451e-b3c7-ae5beb0a1200"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "hidden": true,
                 "text": "Usar sugestão"
             },
             "designerId": "66ee9219-5931-4cf9-9608-3aed86493f5b"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "text": "Cancelar marcação"
             },
             "designerId": "49e747f6-4458-4d3c-8278-bab1ba0b5dc9"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "text": "Ponto de partida"
             },
             "designerId": "c3bdad7d-e012-460a-a253-4b0a50bea826"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "text": "Ponto de chegada"
             },
             "designerId": "fed5056e-d291-4391-a423-591fe1a92bc3"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "text": "Troca sentido (Ida/Volta)"
             },
             "designerId": "269ca6a0-12e1-482c-a646-a2229be77605"
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton30",
                 "hidden": true,
                 "text": "Usar ponto novamente"
             },

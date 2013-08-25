@@ -6,11 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "id": "ocorrencia",
-        "designer|userClassName": "Ocorrencia",
-        "designer|userAlias": "ocorrencia"
+        "id": "informarerro",
+        "designer|userClassName": "InformarErro",
+        "designer|userAlias": "informarErro"
     },
-    "designerId": "d5b66785-457c-417a-9a1b-c88965a4b3c4",
+    "designerId": "73b043b0-d6d7-4d7e-a987-74e0df65495f",
     "cn": [
         {
             "type": "Ext.Toolbar",
@@ -22,25 +22,10 @@
             "userConfig": {
                 "docked": "top",
                 "hidden": true,
-                "id": "toolbarOcorrencia",
-                "title": "Ocorrência"
+                "id": "toolbarInformarErro",
+                "title": "Informar Erro"
             },
-            "designerId": "279e495e-acad-4bb9-8999-37923928b681"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "hidden": true,
-                "html": "Título: informação!",
-                "id": "lblInformacaoOcorrencia",
-                "style": "text-align:center;font-style:italic;"
-            },
-            "designerId": "01dadbd5-419f-44fd-a39a-560da9d00f7e"
+            "designerId": "760b4ea2-0907-464e-a796-01d5d794ec02"
         },
         {
             "type": "Ext.form.FieldSet",
@@ -50,12 +35,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "ocorrenciaOrigem",
+                "id": "erroOrigem",
                 "style": "margin-top:-20px;",
                 "designer|displayName": null,
                 "title": "Origem"
             },
-            "designerId": "212f5198-72bf-4132-862f-7e882c2702bb",
+            "designerId": "51428598-f1b1-44c9-95cc-47059a166ca2",
             "cn": [
                 {
                     "type": "Ext.field.Select",
@@ -65,7 +50,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "selectOcorrenciaOrigem",
+                        "id": "selectErroOrigem",
                         "itemId": "myselectfield",
                         "designer|displayName": "Selecione a origem",
                         "label": null,
@@ -83,7 +68,7 @@
                             "]"
                         ]
                     },
-                    "designerId": "35c9ab7f-9400-4029-a980-5dcdce4c2757",
+                    "designerId": "4b7993f0-fecb-4e3c-a29e-30b549e2b9c2",
                     "cn": [
                         {
                             "type": "basiceventbinding",
@@ -93,7 +78,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onSelectOcorrenciaOrigemChange",
+                                "fn": "onSelectErroOrigemChange",
                                 "implHandler": [
                                     "var txtIdentidicador = Ext.getCmp('txtOcorrenciaIdentificador');\r",
                                     "\r",
@@ -133,7 +118,7 @@
                                 ],
                                 "name": "change"
                             },
-                            "designerId": "1eeca608-cd1a-4901-b120-250a1c6db379"
+                            "designerId": "22d19bfb-8ba0-4f4e-ad82-7a161a30a4ce"
                         }
                     ]
                 },
@@ -146,92 +131,43 @@
                     "codeClass": null,
                     "userConfig": {
                         "hidden": true,
-                        "id": "txtOcorrenciaIdentificador",
+                        "id": "txtErrodentificador",
                         "label": null,
                         "placeHolder": "Identificador"
                     },
-                    "designerId": "0fe6fedf-9acd-4615-9abf-896d868d79d7"
+                    "designerId": "a5adb2ca-7263-4b0d-b568-854bdc4efd81"
                 }
             ]
         },
         {
-            "type": "Ext.form.FieldSet",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "style": "margin-top:-20px;",
-                "ui": "",
-                "title": "Tipo Ocorrencia"
+                "hidden": true,
+                "html": "Título: informação!",
+                "id": "lblInformacaoErro",
+                "style": "text-align:center;font-style:italic;"
             },
-            "designerId": "ab1eb979-6707-4542-9eb0-b62f434fc008",
-            "cn": [
-                {
-                    "type": "Ext.field.Radio",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "docked": null,
-                        "label": "Reclamação",
-                        "labelAlign": "right",
-                        "labelWidth": "75%",
-                        "name": "tipo_ocorrencia",
-                        "value": "reclamacao"
-                    },
-                    "designerId": "c5fed10d-0be4-4032-8654-788e7b274343"
-                },
-                {
-                    "type": "Ext.field.Radio",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Elogio",
-                        "labelAlign": "right",
-                        "labelWidth": "75%",
-                        "name": "tipo_ocorrencia",
-                        "value": "elogio"
-                    },
-                    "designerId": "00ffc51d-38d1-4106-9316-7b88816e8bd3"
-                },
-                {
-                    "type": "Ext.field.Radio",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "label": "Sugestão",
-                        "labelAlign": "right",
-                        "labelWidth": "75%",
-                        "name": "tipo_ocorrencia",
-                        "value": "sugestao"
-                    },
-                    "designerId": "e74ec548-6d2e-40af-9195-262807fd9633"
-                },
-                {
-                    "type": "Ext.field.TextArea",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": "txtDescricaoOcorrencia",
-                        "label": null,
-                        "placeHolder": "Descriçao da Ocorrência"
-                    },
-                    "designerId": "b4b026cd-5974-4cd1-8002-f5322f558812"
-                }
-            ]
+            "designerId": "108bbc0b-fc86-4192-87ec-4d7a25bac210"
+        },
+        {
+            "type": "Ext.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 236,
+                "id": "txtDescricaoOcorrencia1",
+                "label": null,
+                "placeHolder": "Descriçao do Erro"
+            },
+            "designerId": "17b5d411-80ee-405e-8c70-7df9e534c694"
         },
         {
             "type": "Ext.Button",
@@ -241,12 +177,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "btnOcorrenciaRegistrar",
+                "id": "btnErroRegistrar",
                 "itemId": "mybutton22",
                 "style": "margin-top:-20px;",
                 "text": "Registrar"
             },
-            "designerId": "0578131e-1944-43ec-8f87-9e4bd73985c9",
+            "designerId": "71c68de6-c236-4285-ac67-e34b6e8073d1",
             "cn": [
                 {
                     "type": "basiceventbinding",
@@ -277,7 +213,7 @@
                         ],
                         "name": "tap"
                     },
-                    "designerId": "57af71b9-80e2-450d-8d4e-dc28fd6ab14f"
+                    "designerId": "ab8187dd-e338-47e8-9e89-380c9577ac15"
                 }
             ]
         },
@@ -297,7 +233,7 @@
                 ],
                 "name": "activate"
             },
-            "designerId": "86818125-40ca-477d-ab9c-87478a5d746b"
+            "designerId": "a7e7fd0d-6351-4eb5-b36b-9a3125a5f4d6"
         }
     ]
 }

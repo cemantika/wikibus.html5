@@ -1,5 +1,5 @@
 {
-    "type": "tabpanel",
+    "type": "Ext.tab.Panel",
     "reference": {
         "name": "items",
         "type": "array"
@@ -10,18 +10,16 @@
         "designer|userAlias": "viewport",
         "designer|initialView": true
     },
-    "id": "ExtBox1-ext-gen6005",
     "designerId": "eb16d93d-62e3-44b6-8995-a02aa3e5dcc4",
     "cn": [
         {
-            "type": "tabbar",
+            "type": "Ext.tab.Bar",
             "reference": {
                 "name": "tabBar",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyTabBar",
                 "docked": "bottom"
             },
             "designerId": "ee2e4dfa-6612-4ce2-b571-bfe585f2552e"
@@ -37,7 +35,7 @@
                 "iconCls": "home"
             },
             "designerId": "37d94386-eaa4-4a31-a82c-3a9d679101bb",
-            "masterInstanceId": "ExtBox1-ext-gen47364"
+            "masterInstanceId": "897564a4-fff6-4949-bfc6-2ca37d249238"
         },
         {
             "type": "linkedinstance",
@@ -51,7 +49,7 @@
                 "iconCls": "info"
             },
             "designerId": "8fb8aa2d-6484-435b-a27d-4c0258bd75fd",
-            "masterInstanceId": "ExtBox1-ext-gen15672"
+            "masterInstanceId": "d5b66785-457c-417a-9a1b-c88965a4b3c4"
         },
         {
             "type": "linkedinstance",
@@ -65,7 +63,22 @@
                 "iconCls": "user"
             },
             "designerId": "40701553-57be-4dc8-a413-08a28e4a7380",
-            "masterInstanceId": "ExtBox1-ext-gen13252"
+            "masterInstanceId": "41b284da-3521-44d8-80fd-b7ffa68aed19"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Informar Erro",
+                "iconCls": "action",
+                "id": "InformarErro"
+            },
+            "designerId": "13e16ad0-c64b-4285-a7e7-2df2dd321050",
+            "masterInstanceId": "73b043b0-d6d7-4d7e-a987-74e0df65495f"
         },
         {
             "type": "linkedinstance",
@@ -80,7 +93,7 @@
                 "iconCls": "more"
             },
             "designerId": "248d789c-c0c5-4b6a-917b-7df40085bb7c",
-            "masterInstanceId": "ExtBox1-ext-gen88406"
+            "masterInstanceId": "46300fd9-0622-45d3-8439-fea9938e2087"
         },
         {
             "type": "basiceventbinding",
@@ -90,7 +103,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onTabpanelInitialize",
                 "fn": "onTabpanelInitialize",
                 "implHandler": [
                     "telaAtual = 'home';\r",

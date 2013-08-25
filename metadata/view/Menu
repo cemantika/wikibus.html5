@@ -1,29 +1,27 @@
 {
-    "type": "list",
+    "type": "Ext.dataview.List",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "ui": "round",
         "designer|userClassName": "Menu",
         "designer|userAlias": "menu",
-        "ui": "round",
         "store": "menu",
         "onItemDisclosure": true
     },
-    "id": "ExtBox1-ext-gen65731",
     "designerId": "4fbd9467-ab3f-4876-8678-4f323eea7d98",
     "cn": [
         {
-            "type": "template",
+            "type": "Ext.XTemplate",
             "reference": {
                 "name": "itemTpl",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<div>{item}</div>"
                 ],

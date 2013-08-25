@@ -1,30 +1,27 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Empresas",
-        "designer|userAlias": "empresas",
         "autoLoad": true,
-        "autoSync": false,
         "model": "Empresa",
-        "storeId": "empresa"
+        "storeId": "empresa",
+        "designer|userClassName": "Empresas",
+        "designer|userAlias": "empresas"
     },
-    "id": "ExtBox1-ext-gen3633",
     "designerId": "634fd02c-608f-4940-8055-2167a75f84b0",
     "cn": [
         {
-            "type": "ajaxproxy",
+            "type": "Ext.data.proxy.Ajax",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAjaxProxy",
                 "batchActions": null,
                 "api": [
                     "{\r",
@@ -39,14 +36,13 @@
             "designerId": "db23e8e6-e2fd-413d-b145-5f782279cce6",
             "cn": [
                 {
-                    "type": "jsonwriter",
+                    "type": "Ext.data.writer.Json",
                     "reference": {
                         "name": "writer",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonWriter",
                         "nameProperty": null,
                         "encode": true,
                         "rootProperty": "empresas"
@@ -54,14 +50,13 @@
                     "designerId": "03297105-85f1-46a4-ae8e-9940c0f53df5"
                 },
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader",
                         "rootProperty": "empresas"
                     },
                     "designerId": "ef6e4b72-1a7c-49be-908c-9186401ffb15"
@@ -69,15 +64,12 @@
             ]
         },
         {
-            "type": "grouper",
+            "type": "Ext.util.Grouper",
             "reference": {
                 "name": "grouper",
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGrouper"
-            },
             "designerId": "e09c2254-e687-454d-9518-5eea4668546a",
             "cn": [
                 {
@@ -88,7 +80,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "groupFn",
                         "fn": "groupFn",
                         "designer|params": [
                             "record"
@@ -102,14 +93,13 @@
             ]
         },
         {
-            "type": "sorter",
+            "type": "Ext.util.Sorter",
             "reference": {
                 "name": "sorters",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySorter",
                 "property": "nome"
             },
             "designerId": "ef91b468-0f0d-45b3-b071-e63e06f87a37"

@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,59 +9,54 @@
         "designer|userClassName": "Onibus",
         "designer|userAlias": "onibus"
     },
-    "id": "ExtBox1-ext-gen3503",
     "designerId": "f9369654-d341-4ef2-8b68-5c64a833a4e9",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field5",
                 "name": "id_onibus",
                 "type": "int"
             },
             "designerId": "5dc1d698-4e34-4e3b-9861-e21320404744"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field3",
                 "name": "id_empresa",
                 "type": "int"
             },
             "designerId": "435a737f-a08c-4249-950c-2cf23412232e"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field2",
                 "name": "numero"
             },
             "designerId": "58a99f76-e8fc-42d4-8a0d-56e8ebf50eca"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field4",
                 "name": "adaptado",
                 "type": "boolean"
             },

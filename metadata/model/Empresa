@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,33 +9,30 @@
         "designer|userClassName": "Empresa",
         "designer|userAlias": "empresa"
     },
-    "id": "ExtBox1-ext-gen2859",
     "designerId": "d5e1b4bb-a714-4c95-8ea8-c055e14548db",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field",
-                "name": "id_empresa",
                 "mapping": null,
+                "name": "id_empresa",
                 "type": "int"
             },
             "designerId": "c05504ee-668f-4dec-a229-42b539b2645e"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field1",
                 "name": "nome",
                 "type": "string"
             },

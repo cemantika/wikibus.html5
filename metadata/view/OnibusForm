@@ -1,27 +1,25 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "onibusForm",
         "designer|userClassName": "OnibusForm",
-        "designer|userAlias": "onibusform",
-        "id": "onibusForm"
+        "designer|userAlias": "onibusform"
     },
-    "id": "ExtBox1-ext-gen2526",
     "designerId": "6bd0aa28-1d65-47f2-9609-ca29625aa545",
     "cn": [
         {
-            "type": "label",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLabel2",
                 "docked": null,
                 "html": "status da pesquisa",
                 "id": "lblOnibusStatusPesquisa",
@@ -30,33 +28,31 @@
             "designerId": "bbe64b4b-fd45-4f22-aa94-9069c7cb67e0"
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer",
                 "height": 5
             },
             "designerId": "dd9b2255-5a4e-4a1e-a63c-9fa4f98d7f3d"
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyContainer",
                 "id": "formOnibus"
             },
             "designerId": "b6901abe-3463-4679-a455-204461ec8396",
             "cn": [
                 {
-                    "type": "segmentedbutton",
+                    "type": "Ext.SegmentedButton",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -65,7 +61,6 @@
                     "userConfig": {
                         "container|align": "center",
                         "container|pack": "center",
-                        "designer|userClassName": "MySegmentedButton",
                         "id": "opcoesOnibus",
                         "itemId": "mysegmentedbutton1",
                         "defaults": [
@@ -76,14 +71,13 @@
                     "designerId": "0031da1d-8125-412d-8721-d4a2f6fc7125",
                     "cn": [
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnOnibusOcorrencia",
                                 "iconCls": "info",
                                 "iconMask": true,
@@ -92,14 +86,13 @@
                             "designerId": "16920edc-961c-480f-a04d-e81e24e3e8a9"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton1",
                                 "hidden": true,
                                 "id": "btnOnibusLocalizacao",
                                 "iconCls": "locate",
@@ -109,14 +102,13 @@
                             "designerId": "006bd6fa-cc4e-4f89-af1c-a086e41168e3"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton22",
                                 "hidden": true,
                                 "id": "btnOnibusHidden",
                                 "text": null
@@ -124,14 +116,13 @@
                             "designerId": "db5f3e65-be08-4ed8-a36a-73a9976c873f"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnOnibusFavorito",
                                 "iconCls": "star",
                                 "iconMask": true,
@@ -140,14 +131,13 @@
                             "designerId": "bb4e074a-d5c1-4342-bf6f-2d714dc1acaf"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "hidden": true,
                                 "id": "btnOnibusDetalhe",
                                 "iconCls": "bookmarks",
@@ -164,7 +154,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onOpcoesOnibusToggle",
                                 "fn": "onOpcoesOnibusToggle",
                                 "implHandler": [
                                     "//Variavel que habilita os campos do formulario apenas quando 'btnOnibusEditar' estiver ativo\r",
@@ -199,14 +188,13 @@
                             "designerId": "6e160b03-6b57-4cd9-9979-28098d82c93a"
                         },
                         {
-                            "type": "button",
+                            "type": "Ext.Button",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyButton2",
                                 "id": "btnOnibusEditar",
                                 "itemId": "mybutton10",
                                 "iconCls": "compose",
@@ -218,14 +206,13 @@
                     ]
                 },
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet",
                         "id": "infoOnibus",
                         "defaults": [
                             "{disabled: false}"
@@ -236,14 +223,13 @@
                     "designerId": "c4766c72-2f7c-410a-99d0-8b3c7b100a55",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextField",
                                 "disabled": true,
                                 "id": "txtNumeroOnibus",
                                 "label": null,
@@ -254,14 +240,13 @@
                             "designerId": "174b3c27-5692-45f3-baa0-46479b4712a7"
                         },
                         {
-                            "type": "selectfield",
+                            "type": "Ext.field.Select",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MySelectField",
                                 "disabled": true,
                                 "id": "selectEmpresa",
                                 "label": null,
@@ -276,14 +261,13 @@
                             "designerId": "c74aa822-c08a-4bd7-8c45-7f365c9ab560"
                         },
                         {
-                            "type": "checkboxfield",
+                            "type": "Ext.field.Checkbox",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyCheckbox",
                                 "disabled": true,
                                 "id": "checkAdaptado",
                                 "label": "Veiculo adaptado",
@@ -296,14 +280,13 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton5",
                         "id": "btnSalvarOnibus",
                         "ui": "confirm",
                         "iconCls": null,

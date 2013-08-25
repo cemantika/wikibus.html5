@@ -1,17 +1,16 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "ponto",
         "designer|userClassName": "Ponto",
         "designer|userAlias": "ponto",
-        "id": "ponto",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen35338",
     "designerId": "f3e8c1ce-e6c1-4f90-ba97-429bfee9d972",
     "cn": [
         {
@@ -22,7 +21,7 @@
             },
             "codeClass": null,
             "designerId": "d5ec6eb0-b48f-45b5-92ce-a800db3fc8fb",
-            "masterInstanceId": "ExtBox1-ext-gen32125"
+            "masterInstanceId": "dc212b51-103b-4092-8655-f7bfa955cc9c"
         },
         {
             "type": "basiceventbinding",
@@ -32,7 +31,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPontoActivate",
                 "fn": "onPontoActivate",
                 "implHandler": [
                     "Ext.getCmp('btnNavConfig').setHidden(false);\r",
@@ -51,7 +49,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPontoDeactivate",
                 "fn": "onPontoDeactivate",
                 "implHandler": [
                     "Ext.getCmp('btnNavConfig').setHidden(true);"
@@ -68,7 +65,7 @@
             },
             "codeClass": null,
             "designerId": "316fb202-f682-43c7-86a4-b161a999e3bf",
-            "masterInstanceId": "ExtBox1-ext-gen2090"
+            "masterInstanceId": "03f3a496-0e4b-458f-9c82-c55e97880f61"
         }
     ]
 }

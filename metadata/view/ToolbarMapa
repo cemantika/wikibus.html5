@@ -1,5 +1,5 @@
 {
-    "type": "toolbar",
+    "type": "Ext.Toolbar",
     "reference": {
         "name": "items",
         "type": "array"
@@ -8,20 +8,19 @@
     "userConfig": {
         "container|align": "center",
         "container|pack": "center",
-        "designer|userClassName": "ToolbarMapa",
-        "designer|userAlias": "toolbarmapa",
         "docked": "top",
         "hidden": true,
         "id": "toolbarPonto",
         "style": null,
         "ui": "outro",
+        "designer|userClassName": "ToolbarMapa",
+        "designer|userAlias": "toolbarmapa",
         "title": ""
     },
-    "id": "ExtBox1-ext-gen2090",
     "designerId": "03f3a496-0e4b-458f-9c82-c55e97880f61",
     "cn": [
         {
-            "type": "segmentedbutton",
+            "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -30,7 +29,6 @@
             "userConfig": {
                 "container|align": "center",
                 "container|pack": "center",
-                "designer|userClassName": "MySegmentedButton6",
                 "docked": null,
                 "id": "opcoesCentralizaMapa",
                 "itemId": "mysegmentedbutton6",
@@ -40,14 +38,13 @@
             "designerId": "3f7137ac-92ec-4a76-8720-abe21d9ba183",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton29",
                         "id": "btnCentralizaMapa",
                         "ui": "action",
                         "iconCls": "locate",
@@ -64,7 +61,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "centralizaMapa",
                         "fn": "centralizaMapa",
                         "implHandler": [
                             "//if(button.id == 'btnCentralizaMapa' && isPressed){\r",
@@ -86,21 +82,20 @@
             ]
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer5",
                 "docked": null,
                 "width": 5
             },
             "designerId": "7675c622-11e3-423d-acbf-dff5683d22bd"
         },
         {
-            "type": "segmentedbutton",
+            "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -108,7 +103,6 @@
             "codeClass": null,
             "userConfig": {
                 "container|align": "center",
-                "designer|userClassName": "MySegmentedButton5",
                 "docked": null,
                 "id": "opcoesAdicionarPontos",
                 "itemId": "mysegmentedbutton5",
@@ -117,7 +111,7 @@
             "designerId": "2fbeaa76-9fad-42c9-93bb-dd10f820ab1d",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -125,7 +119,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "pressed": true,
-                        "designer|userClassName": "MyButton19",
                         "docked": null,
                         "id": "btnExibePontos",
                         "ui": "action",
@@ -143,7 +136,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMysegmentedbutton5Toggle",
                         "fn": "onMysegmentedbutton5Toggle",
                         "implHandler": [
                             "// função para mostrar e esconder os pontos do mapa\r",
@@ -174,14 +166,13 @@
                     "designerId": "a9034fcb-f1dd-481c-8f1d-c6abfc5ee0e9"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton39",
                         "hidden": true,
                         "id": "btnExibePontosHidden",
                         "text": "MyButton39"
@@ -191,28 +182,26 @@
             ]
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer5",
                 "docked": null,
                 "width": 5
             },
             "designerId": "76cafa51-0bd5-47e5-9d77-de82322f545c"
         },
         {
-            "type": "segmentedbutton",
+            "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySegmentedButton3",
                 "id": "opcoesMapaPonto",
                 "itemId": "mysegmentedbutton3",
                 "allowDepress": true
@@ -220,14 +209,13 @@
             "designerId": "cea7ee68-34b2-4363-a4e3-007e1efca0a0",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton10",
                         "id": "btnAtivaAdicao",
                         "ui": "action",
                         "iconCls": "add",
@@ -244,7 +232,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onOpcoesMapaPontoToggle",
                         "fn": "onOpcoesMapaPontoToggle",
                         "implHandler": [
                             "if(button.id == 'btnBuscaPontos' && isPressed){\r",
@@ -279,14 +266,13 @@
             ]
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton21",
                 "id": "btnBuscaPontos",
                 "itemId": "mybutton11",
                 "ui": "action",
@@ -304,7 +290,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onBtnBuscaPontosTap",
                         "fn": "onBtnBuscaPontosTap",
                         "implHandler": [
                             "//Exibe promp de confirmação\r",
@@ -338,21 +323,20 @@
             ]
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer5",
                 "docked": null,
                 "width": 5
             },
             "designerId": "440e5db7-4416-4e9e-93fd-ba9f8a948db8"
         },
         {
-            "type": "segmentedbutton",
+            "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -361,7 +345,6 @@
             "userConfig": {
                 "container|align": "center",
                 "container|pack": "center",
-                "designer|userClassName": "MySegmentedButton9",
                 "docked": null,
                 "hidden": true,
                 "id": "opcoesMapaLinha",
@@ -370,14 +353,13 @@
             "designerId": "4eb49dde-1a55-4fbb-b49e-88314fdfb797",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton34",
                         "docked": null,
                         "id": "btnRota",
                         "ui": "confirm",
@@ -396,7 +378,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onOpcoesMapaLinhaToggle",
                         "fn": "onOpcoesMapaLinhaToggle",
                         "implHandler": [
                             "if(isPressed){\r",

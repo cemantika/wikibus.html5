@@ -6,24 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Pontos",
-        "designer|userAlias": "pontos",
-        "autoSync": false,
         "model": "Ponto",
-        "storeId": "pontos"
+        "storeId": "pontos",
+        "designer|userClassName": "Pontos",
+        "designer|userAlias": "pontos"
     },
-    "id": "ExtBox1-ext-gen17191",
     "designerId": "8d5c00cc-beb9-438e-a073-a278f8834c49",
     "cn": [
         {
-            "type": "ajaxproxy",
+            "type": "Ext.data.proxy.Ajax",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAjaxProxy2",
                 "api": [
                     "{\r",
                     "    create: 'php/ponto/criaPonto.php',\r",
@@ -36,27 +33,25 @@
             "designerId": "35ab9202-0c8f-4d02-ae8e-f0110bb9e383",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader2",
                         "rootProperty": "pontos"
                     },
                     "designerId": "f583b69f-eeb3-4bc5-bfd7-eacc52d2ea75"
                 },
                 {
-                    "type": "jsonwriter",
+                    "type": "Ext.data.writer.Json",
                     "reference": {
                         "name": "writer",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonWriter2",
                         "encode": true,
                         "rootProperty": "pontos"
                     },

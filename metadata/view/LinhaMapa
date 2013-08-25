@@ -1,17 +1,16 @@
 {
-    "type": "panel",
+    "type": "Ext.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "painelLinha",
         "designer|userClassName": "LinhaMapa",
         "designer|userAlias": "linhamapa",
-        "id": "painelLinha",
         "layout": "fit"
     },
-    "id": "ExtBox1-ext-gen50850",
     "designerId": "a8d58098-b2fa-42b1-a1f3-644accbbeb66",
     "cn": [
         {
@@ -22,7 +21,7 @@
             },
             "codeClass": null,
             "designerId": "edc95e2c-19bc-40c2-a6a5-abe9d847f5b8",
-            "masterInstanceId": "ExtBox1-ext-gen32125"
+            "masterInstanceId": "dc212b51-103b-4092-8655-f7bfa955cc9c"
         },
         {
             "type": "basiceventbinding",
@@ -32,7 +31,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPainelLinhaActivate",
                 "fn": "onPainelLinhaActivate",
                 "implHandler": [
                     "Ext.getCmp('btnNavConfig').setHidden(false);\r",
@@ -52,7 +50,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onPainelLinhaDeactivate",
                 "fn": "onPainelLinhaDeactivate",
                 "implHandler": [
                     "Ext.getCmp('btnNavConfig').setHidden(true);\r",
@@ -70,7 +67,7 @@
             },
             "codeClass": null,
             "designerId": "149529f0-2209-417a-9768-976ad36da786",
-            "masterInstanceId": "ExtBox1-ext-gen2090"
+            "masterInstanceId": "03f3a496-0e4b-458f-9c82-c55e97880f61"
         }
     ]
 }
