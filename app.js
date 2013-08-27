@@ -26,7 +26,8 @@ Ext.application({
         'Linha',
         'Menu',
         'Itinerario',
-        'Ocorrencia'
+        'Ocorrencia',
+        'Favorito'
     ],
     stores: [
         'Empresas',
@@ -34,7 +35,8 @@ Ext.application({
         'Pontos',
         'Linha',
         'Menu',
-        'Itinerarios'
+        'Itinerarios',
+        'Favoritos'
     ],
     views: [
         'Empresa',

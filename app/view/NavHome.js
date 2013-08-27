@@ -77,7 +77,7 @@ Ext.define('Ubibus.view.NavHome', {
     },
 
     onBtnNavConfigTap: function(button, e, options) {
-        var tela = Ext.getCmp('home-view').getActiveItem().id;
+        var tela = Ext.getCmp('homePort').getActiveItem().id;
 
         switch(tela){
             case 'ponto':

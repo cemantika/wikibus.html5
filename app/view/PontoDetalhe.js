@@ -164,6 +164,10 @@ Ext.define('Ubibus.view.PontoDetalhe', {
                 fn: 'onTxtNumeroLinhaClearicontap',
                 event: 'clearicontap',
                 delegate: '#txtItinerarioNumeroLinha'
+            },
+            {
+            	fn: 'onInitialize',
+            	event: 'initialize'
             }
         ]
     },
@@ -233,6 +237,26 @@ Ext.define('Ubibus.view.PontoDetalhe', {
         store.clearFilter();
 
         Ext.getCmp('btnItinerarioSugerir').setHidden(true);
+    },
+    
+    onInitialize: function(component, options) {
+    	Ext.Ajax.request({
+    	    url: 'php/favorito/get.php',
+    	    method: 'GET',    
+    	    params: {
+    	        id_usuario: 0,
+    	        tipo: 'P',
+    	        id_entidade: pontoAtual
+    	    },
+    	
+    	    callback: function(options, success, response) {
+    	    	var response_obj = Ext.decode(response.responseText);
+    	    	if(response_obj['favoritos'] > 0) {
+    	    		var favoritoBt = Ext.getCmp('btnPontoFavorito');
+    	    		Ext.getCmp('opcoesPontoLinha').setPressedButtons([favoritoBt]);    	    		
+    	    	}
+    	    }
+    	});
     }
 
 });
