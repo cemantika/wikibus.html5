@@ -601,17 +601,14 @@ Ext.define('Ubibus.controller.Main', {
             senha: Ext.getCmp('txtUsuarioSenha').getValue()
         });
 
-
-        alert(dados);
-
         var storeUsuario = Ext.getStore('usuarios');
-
+        alert("store OK");
         storeUsuario.removeAll();
-
+        alert("removeAll OK");
         storeUsuario.add(dados);
-
+        alert("add OK");
         storeUsuario.sync();
-
+        alert("sync OK");
     }
 
 });

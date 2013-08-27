@@ -73,9 +73,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "id": "InformarErro",
                 "title": "Informar Erro",
-                "iconCls": "action",
-                "id": "InformarErro"
+                "iconCls": "action"
             },
             "designerId": "13e16ad0-c64b-4285-a7e7-2df2dd321050",
             "masterInstanceId": "73b043b0-d6d7-4d7e-a987-74e0df65495f"

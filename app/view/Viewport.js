@@ -46,9 +46,9 @@ Ext.define('Ubibus.view.Viewport', {
             },
             {
                 xtype: 'informarErro',
+                id: 'InformarErro',
                 title: 'Informar Erro',
-                iconCls: 'action',
-                id: 'InformarErro'
+                iconCls: 'action'
             },
             {
                 xtype: 'indicadores',

@@ -53,6 +53,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "writeAllFields": false,
+                        "encode": true,
                         "rootProperty": "usuarios"
                     },
                     "designerId": "1f32f4ce-423f-4a8d-9177-07e75cc1338b"

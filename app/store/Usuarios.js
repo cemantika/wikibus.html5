@@ -39,6 +39,8 @@ Ext.define('Ubibus.store.Usuarios', {
             },
             writer: {
                 type: 'json',
+                writeAllFields: false,
+                encode: true,
                 rootProperty: 'usuarios'
             }
         }
