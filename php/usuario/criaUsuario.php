@@ -11,7 +11,7 @@
 	$senha = $data->senha;
 	
 	//consulta sql
-	$query = sprintf("INSERT INTO usuario (nome, email, senha) values (%s, %s, '%s')",
+	$query = sprintf("INSERT INTO usuario (nome, email, senha) values ('%s', '%s', '%s')",
 		mysql_real_escape_string($nome),
 		mysql_real_escape_string($email),
 		mysql_real_escape_string($senha)		

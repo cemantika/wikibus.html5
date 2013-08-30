@@ -856,13 +856,13 @@
                     "});\r",
                     "\r",
                     "var storeUsuario = Ext.getStore('usuarios');\r",
-                    "alert(\"store OK\");\r",
+                    "\r",
                     "storeUsuario.removeAll();\r",
-                    "alert(\"removeAll OK\");\r",
+                    "\r",
                     "storeUsuario.add(dados);\r",
-                    "alert(\"add OK\");\r",
+                    "\r",
                     "storeUsuario.sync();\r",
-                    "alert(\"sync OK\");"
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
