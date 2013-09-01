@@ -1,15 +1,15 @@
- <?php
+<?php
 	//chama o arquivo de conexão com o bd
 	include("../conectar.php");
 
-	$info = $_POST['onibus'];
+	$info = $_POST['linhas'];
 
 	$data = json_decode(stripslashes($info));
 
-	$id = $data->id;
+	$id = $data->id_linha;
 	 
 	//consulta sql
-	$query = sprintf("DELETE FROM Empresa WHERE id=%d",
+	$query = sprintf("DELETE FROM linha WHERE id= %d",
 		mysql_real_escape_string($id));
 
 	$rs = mysql_query($query);

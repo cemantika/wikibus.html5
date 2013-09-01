@@ -311,6 +311,24 @@
                                 "placeHolder": "Via"
                             },
                             "designerId": "a105bed9-9d41-46a5-be85-a6552459bb0f"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "disabled": true,
+                                "hidden": false,
+                                "id": "txtLinhaId",
+                                "label": null,
+                                "labelWidth": "45%",
+                                "name": "id_linha",
+                                "placeHolder": "Id"
+                            },
+                            "designerId": "2d507852-0877-46b7-8a09-735b7a063ba7"
                         }
                     ]
                 },

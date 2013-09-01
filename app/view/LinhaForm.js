@@ -143,6 +143,15 @@ Ext.define('Ubibus.view.LinhaForm', {
                                 labelWidth: '45%',
                                 name: 'via',
                                 placeHolder: 'Via'
+                            },
+                            {
+                                xtype: 'textfield',
+                                disabled: true,
+                                hidden: false,
+                                id: 'txtLinhaId',
+                                labelWidth: '45%',
+                                name: 'id_linha',
+                                placeHolder: 'Id'
                             }
                         ]
                     },

@@ -79,6 +79,9 @@ Ext.define('Ubibus.controller.Main', {
             },
             "usuario #btnUsuarioConfirmar": {
                 tap: 'confirmarUsuario'
+            },
+            "linhaform #btnLinhaExcluir": {
+                tap: 'excluirLinha'
             }
         }
     },
@@ -626,9 +629,9 @@ Ext.define('Ubibus.controller.Main', {
             //Fix-me!! O perfil de moderador deve ser obtido via consulta à base, através de script php!
             //var usuarioLogado = usuario retornado do login
             //if (usuarioLogado.idPerfil == 1){
-            //sessionObject = { 'perfilModerador': true };
+            sessionObject = { 'perfilModerador': true };
             //}else{
-            sessionObject = { 'perfilModerador': false };
+            //sessionObject = { 'perfilModerador': false };
             //}
 
 
@@ -647,6 +650,21 @@ Ext.define('Ubibus.controller.Main', {
 
             storeUsuario.sync();
         }
+    },
+
+    excluirLinha: function(button, e, eOpts) {
+        var dadosLinha = this.getLinhaForm().getValues();
+
+        var storeLinha = Ext.getStore('linha');
+
+        //limpa o store antes de enviar os dados
+        storeLinha.removeAll();
+        alert(dadosLinha.id_linha);
+        //adiciona dados e envia pro servidor excluir
+        storeLinha.remove(dadosLinha);
+
+        storeLinha.sync();
+        alert(JSON.stringify(dadosLinha));
     }
 
 });

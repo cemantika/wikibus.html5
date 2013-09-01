@@ -50,7 +50,7 @@
                     "if(navigator.geolocation) {\r",
                     "    navigator.geolocation.getCurrentPosition(function(position) {\r",
                     "        var pos = new google.maps.LatLng(position.coords.latitude,\r",
-                    "        position.coords.longitude);\r",
+                    "            position.coords.longitude);\r",
                     "        latLng = pos;\r",
                     "\r",
                     "        //that.placeMarker(pos, gmap);\r",

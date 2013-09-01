@@ -880,9 +880,9 @@
                     "    //Fix-me!! O perfil de moderador deve ser obtido via consulta à base, através de script php!\r",
                     "    //var usuarioLogado = usuario retornado do login\r",
                     "    //if (usuarioLogado.idPerfil == 1){\r",
-                    "    //sessionObject = { 'perfilModerador': true };\r",
+                    "    sessionObject = { 'perfilModerador': true };\r",
                     "    //}else{\r",
-                    "    sessionObject = { 'perfilModerador': false };\r",
+                    "    //sessionObject = { 'perfilModerador': false };\r",
                     "    //}\r",
                     "\r",
                     "\r",
@@ -920,6 +920,35 @@
                 "selector": "#usuario"
             },
             "designerId": "603eeec7-d0b8-47a4-844c-515ca3467939"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "excluirLinha",
+                "implHandler": [
+                    "var dadosLinha = this.getLinhaForm().getValues();\r",
+                    "\r",
+                    "var storeLinha = Ext.getStore('linha');\r",
+                    "\r",
+                    "//limpa o store antes de enviar os dados\r",
+                    "storeLinha.removeAll();\r",
+                    "alert(dadosLinha.id_linha);\r",
+                    "//adiciona dados e envia pro servidor excluir\r",
+                    "storeLinha.remove(dadosLinha);\r",
+                    "\r",
+                    "storeLinha.sync();\r",
+                    "alert(JSON.stringify(dadosLinha));"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "linhaform #btnLinhaExcluir"
+            },
+            "designerId": "2897109d-2d66-4d67-818e-79afd6b40c53"
         }
     ]
 }
