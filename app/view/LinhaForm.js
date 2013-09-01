@@ -33,6 +33,7 @@ Ext.define('Ubibus.view.LinhaForm', {
             {
                 xtype: 'container',
                 id: 'formLinha',
+                itemId: 'mycontainer',
                 items: [
                     {
                         xtype: 'segmentedbutton',
@@ -82,6 +83,14 @@ Ext.define('Ubibus.view.LinhaForm', {
                                 id: 'btnLinhaEditar',
                                 itemId: 'mybutton10',
                                 iconCls: 'compose',
+                                iconMask: true,
+                                text: ''
+                            },
+                            {
+                                xtype: 'button',
+                                id: 'btnLinhaExcluir',
+                                itemId: 'mybutton11',
+                                iconCls: 'delete',
                                 iconMask: true,
                                 text: ''
                             },

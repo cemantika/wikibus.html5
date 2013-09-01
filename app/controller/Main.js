@@ -78,7 +78,7 @@ Ext.define('Ubibus.controller.Main', {
                 tap: 'exibeOcorrenciaPonto'
             },
             "usuario #btnUsuarioConfirmar": {
-                tap: 'salvarUsuario'
+                tap: 'confirmarUsuario'
             }
         }
     },
@@ -281,6 +281,15 @@ Ext.define('Ubibus.controller.Main', {
 
                     Ext.getCmp('formOnibus').setHidden(false);
 
+                    //Exibe ou não o botão de remover.
+                    var sessionObject = localStorage.getItem('sessionObject');            
+                    var perfilModerador = JSON.parse(sessionObject).perfilModerador;
+                    var esconder = !perfilModerador;
+
+                    Ext.getCmp('btnOnibusExcluir').setHidden(esconder);
+
+
+
                 }else{//Onibus não encontrado
 
                     //Guarda o numero pesquisado
@@ -370,6 +379,15 @@ Ext.define('Ubibus.controller.Main', {
                     Ext.getCmp('btnSalvarLinha').setHidden(true);
 
                     Ext.getCmp('formLinha').setHidden(false);
+
+
+                    //Exibe ou não o botão de remover.
+                    var sessionObject = localStorage.getItem('sessionObject');            
+                    var perfilModerador = JSON.parse(sessionObject).perfilModerador;
+                    var esconder = !perfilModerador;
+
+                    Ext.getCmp('btnLinhaExcluir').setHidden(esconder);
+
 
                 }else{//Linha não encontrado
 
@@ -591,9 +609,7 @@ Ext.define('Ubibus.controller.Main', {
         Ext.getCmp('selectOcorrenciaOrigem').setValue(2);
     },
 
-    salvarUsuario: function(button, e, eOpts) {
-
-
+    confirmarUsuario: function(button, e, eOpts) {
         //Cria o model com os dados do usuario a ser cadastrado
         var dados = Ext.create('model.usuario', {            
             nome: Ext.getCmp('txtUsuarioNome').getValue(),
@@ -601,14 +617,36 @@ Ext.define('Ubibus.controller.Main', {
             senha: Ext.getCmp('txtUsuarioSenha').getValue()
         });
 
-        var storeUsuario = Ext.getStore('usuarios');
+        var nome_botao = button.getText();
 
-        storeUsuario.removeAll();
+        var sessionObject = { 'perfilModerador': true };
 
-        storeUsuario.add(dados);
+        if(nome_botao == 'Logar'){
 
-        storeUsuario.sync();
+            //Fix-me!! O perfil de moderador deve ser obtido via consulta à base, através de script php!
+            //var usuarioLogado = usuario retornado do login
+            //if (usuarioLogado.idPerfil == 1){
+            //sessionObject = { 'perfilModerador': true };
+            //}else{
+            sessionObject = { 'perfilModerador': false };
+            //}
 
+
+            //log the session object
+            localStorage.setItem('sessionObject', JSON.stringify(sessionObject ));
+
+
+
+        }else{
+
+            var storeUsuario = Ext.getStore('usuarios');
+
+            storeUsuario.removeAll();
+
+            storeUsuario.add(dados);
+
+            storeUsuario.sync();
+        }
     }
 
 });

@@ -47,7 +47,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "formLinha"
+                "id": "formLinha",
+                "itemId": "mycontainer"
             },
             "designerId": "77cbf9e9-5665-4913-8f10-d2ea6e297dd8",
             "cn": [
@@ -157,6 +158,22 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "id": "btnLinhaExcluir",
+                                "itemId": "mybutton11",
+                                "iconCls": "delete",
+                                "iconMask": true,
+                                "text": ""
+                            },
+                            "designerId": "7123ac56-69ac-495f-ac8e-d7efe9416fda"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "id": "btnLinhaDetalhe",
                                 "iconCls": "maps",
                                 "iconMask": true,
@@ -180,7 +197,7 @@
                                     "switch(button.id)\r",
                                     "{\r",
                                     "    case 'btnLinhaLocalizacao':\r",
-                                    "        alert('de boa');\r",
+                                    "    alert('de boa');\r",
                                     "    //TODO\r",
                                     "    break;\r",
                                     "    case 'btnLinhaOcorrencia':\r",

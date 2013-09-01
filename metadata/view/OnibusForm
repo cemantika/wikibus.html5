@@ -202,6 +202,22 @@
                                 "text": ""
                             },
                             "designerId": "717bbfc7-5650-4b7d-9cef-567fdede1cde"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "btnOnibusExcluir",
+                                "itemId": "mybutton11",
+                                "iconCls": "delete",
+                                "iconMask": true,
+                                "text": ""
+                            },
+                            "designerId": "7097c9f4-96d6-451c-87e7-8c60d34b8682"
                         }
                     ]
                 },

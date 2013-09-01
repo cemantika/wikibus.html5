@@ -90,6 +90,14 @@ Ext.define('Ubibus.view.OnibusForm', {
                                 iconCls: 'compose',
                                 iconMask: true,
                                 text: ''
+                            },
+                            {
+                                xtype: 'button',
+                                id: 'btnOnibusExcluir',
+                                itemId: 'mybutton11',
+                                iconCls: 'delete',
+                                iconMask: true,
+                                text: ''
                             }
                         ]
                     },
