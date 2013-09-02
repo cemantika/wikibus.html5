@@ -24,6 +24,11 @@ Ext.define('Ubibus.view.Usuario', {
         },
         items: [
             {
+                xtype: 'label',
+                html: 'status do usuario',
+                id: 'lblLinhaStatusUsuario'
+            },
+            {
                 xtype: 'segmentedbutton',
                 id: 'opcoesUsuario',
                 itemId: 'mysegmentedbutton4',

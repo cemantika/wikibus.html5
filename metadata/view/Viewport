@@ -73,6 +73,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": true,
                 "id": "InformarErro",
                 "title": "Informar Erro",
                 "iconCls": "action"

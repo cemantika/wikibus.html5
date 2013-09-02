@@ -620,16 +620,28 @@ Ext.define('Ubibus.controller.Main', {
             senha: Ext.getCmp('txtUsuarioSenha').getValue()
         });
 
+        var storeUsuario = Ext.getStore('usuarios');
+
         var nome_botao = button.getText();
 
-        var sessionObject = { 'perfilModerador': true };
+        var sessionObject = { 'perfilModerador': false };
 
         if(nome_botao == 'Logar'){
+            storeUsuario.load
+            //Trecho a ser removido!!!! Apenas para exemplificar o login do 
+            var email = Ext.getCmp('txtUsuarioEmail').getValue();
+            if (email == 'admin'){
+                sessionObject = { 'perfilModerador': true };
+            }else{
+                sessionObject = { 'perfilModerador': false };
+            }
+
+            Ext.getCmp('lblLinhaStatusUsuario').setHtml('Usuário autenticado!   ;)');
 
             //Fix-me!! O perfil de moderador deve ser obtido via consulta à base, através de script php!
             //var usuarioLogado = usuario retornado do login
             //if (usuarioLogado.idPerfil == 1){
-            sessionObject = { 'perfilModerador': true };
+            //sessionObject = { 'perfilModerador': true };
             //}else{
             //sessionObject = { 'perfilModerador': false };
             //}
@@ -642,7 +654,7 @@ Ext.define('Ubibus.controller.Main', {
 
         }else{
 
-            var storeUsuario = Ext.getStore('usuarios');
+
 
             storeUsuario.removeAll();
 

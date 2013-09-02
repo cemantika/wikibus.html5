@@ -14,6 +14,19 @@
     "designerId": "41b284da-3521-44d8-80fd-b7ffa68aed19",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "status do usuario",
+                "id": "lblLinhaStatusUsuario"
+            },
+            "designerId": "6fb6efc6-9581-4f17-afca-fdb1a7d3d155"
+        },
+        {
             "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
