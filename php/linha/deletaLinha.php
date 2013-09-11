@@ -1,7 +1,7 @@
 <?php
 	//chama o arquivo de conexão com o bd
 	include("../conectar.php");
-
+	throw new Exception('Division by zero.');
 	$info = $_POST['linhas'];
 
 	$data = json_decode(stripslashes($info));

@@ -11,8 +11,7 @@
             "    {\"item\": \"Linhas\", \"view\": \"linha\"},   \r",
             "    {\"item\": \"Pontos\", \"view\": \"ponto\"},\r",
             "    {\"item\": \"Onibus\", \"view\": \"onibus\"},\r",
-            "    {\"item\": \"Empresas\", \"view\": \"empresa\"},\r",
-            "    {\"item\": \"Informar Erro\", \"view\": \"informarErro\"}\r",
+            "    {\"item\": \"Empresas\", \"view\": \"empresa\"}\r",
             "]"
         ],
         "model": "Menu",

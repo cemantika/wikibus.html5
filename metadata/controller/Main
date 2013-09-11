@@ -949,12 +949,12 @@
                     "\r",
                     "//limpa o store antes de enviar os dados\r",
                     "storeLinha.removeAll();\r",
-                    "alert(dadosLinha.id_linha);\r",
+                    "//alert(dadosLinha.id_linha);\r",
                     "//adiciona dados e envia pro servidor excluir\r",
                     "storeLinha.remove(dadosLinha);\r",
                     "\r",
                     "storeLinha.sync();\r",
-                    "alert(JSON.stringify(dadosLinha));"
+                    "//alert(JSON.stringify(dadosLinha));"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

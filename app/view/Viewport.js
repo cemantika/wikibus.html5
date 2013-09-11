@@ -36,11 +36,13 @@ Ext.define('Ubibus.view.Viewport', {
             },
             {
                 xtype: 'ocorrencia',
+                hidden: false,
                 title: 'Ocorrência',
                 iconCls: 'info'
             },
             {
                 xtype: 'usuario',
+                hidden: false,
                 title: 'Usuário',
                 iconCls: 'user'
             },

@@ -671,12 +671,12 @@ Ext.define('Ubibus.controller.Main', {
 
         //limpa o store antes de enviar os dados
         storeLinha.removeAll();
-        alert(dadosLinha.id_linha);
+        //alert(dadosLinha.id_linha);
         //adiciona dados e envia pro servidor excluir
         storeLinha.remove(dadosLinha);
 
         storeLinha.sync();
-        alert(JSON.stringify(dadosLinha));
+        //alert(JSON.stringify(dadosLinha));
     }
 
 });

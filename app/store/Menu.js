@@ -38,10 +38,6 @@ Ext.define('Ubibus.store.Menu', {
             {
                 item: 'Empresas',
                 view: 'empresa'
-            },
-            {
-                item: 'Informar Erro',
-                view: 'informarErro'
             }
         ],
         model: 'Ubibus.model.Menu',

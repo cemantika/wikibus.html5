@@ -45,6 +45,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": false,
                 "title": "Ocorrência",
                 "iconCls": "info"
             },
@@ -59,6 +60,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "hidden": false,
                 "title": "Usuário",
                 "iconCls": "user"
             },
