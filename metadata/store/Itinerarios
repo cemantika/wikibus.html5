@@ -6,25 +6,22 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Itinerarios",
-        "designer|userAlias": "itinerarios",
         "autoLoad": false,
-        "autoSync": false,
         "model": "Itinerario",
-        "storeId": "itinerarios"
+        "storeId": "itinerarios",
+        "designer|userClassName": "Itinerarios",
+        "designer|userAlias": "itinerarios"
     },
-    "id": "ExtBox1-ext-gen79444",
     "designerId": "4bd9c710-aff8-4f7c-924c-5b92ac88bf3d",
     "cn": [
         {
-            "type": "ajaxproxy",
+            "type": "Ext.data.proxy.Ajax",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAjaxProxy4",
                 "api": [
                     "{\r",
                     "    create: 'php/itinerario/criaItinerario.php',\r",
@@ -37,27 +34,25 @@
             "designerId": "a9e65fe7-7a5d-461e-b405-f33a916d926c",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader4",
                         "rootProperty": "itinerarios"
                     },
                     "designerId": "43b8d6ba-69aa-4b45-9565-5ba1450a2f1a"
                 },
                 {
-                    "type": "jsonwriter",
+                    "type": "Ext.data.writer.Json",
                     "reference": {
                         "name": "writer",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonWriter4",
                         "encode": true,
                         "rootProperty": "itinerarios"
                     },

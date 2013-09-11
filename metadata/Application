@@ -1,5 +1,5 @@
 {
-    "type": "application",
+    "type": "Ext.app.Application",
     "reference": {
         "name": "items",
         "type": "array"
@@ -14,7 +14,8 @@
             "Linha",
             "Menu",
             "Itinerario",
-            "Ocorrencia"
+            "Ocorrencia",
+            "Usuario"
         ],
         "stores": [
             "Empresas",
@@ -42,13 +43,14 @@
             "Indicadores",
             "ToolbarMapa",
             "PontoDetalhe",
-            "ListaLinhas"
+            "ListaLinhas",
+            "InformarErro",
+            "MyNavigationView"
         ],
-        "name": "Ubibus",
         "controllers": [
             "Main"
-        ]
+        ],
+        "name": "Ubibus"
     },
-    "id": "ExtBox1-ext-gen1703",
     "designerId": "application"
 }

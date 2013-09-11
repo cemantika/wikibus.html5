@@ -6,24 +6,21 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Linha",
-        "designer|userAlias": "linha",
-        "autoSync": false,
         "model": "Linha",
-        "storeId": "linha"
+        "storeId": "linha",
+        "designer|userClassName": "Linha",
+        "designer|userAlias": "linha"
     },
-    "id": "ExtBox1-ext-gen30195",
     "designerId": "511d7166-8183-4614-b3d7-2da5e05e50ab",
     "cn": [
         {
-            "type": "ajaxproxy",
+            "type": "Ext.data.proxy.Ajax",
             "reference": {
                 "name": "proxy",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyAjaxProxy1",
                 "api": [
                     "{\r",
                     "    create: 'php/linha/criaLinha.php',\r",
@@ -36,27 +33,25 @@
             "designerId": "112ded48-8cb2-4559-a75b-df18ea0f39ce",
             "cn": [
                 {
-                    "type": "jsonreader",
+                    "type": "Ext.data.reader.Json",
                     "reference": {
                         "name": "reader",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonReader1",
                         "rootProperty": "linhas"
                     },
                     "designerId": "31d64307-8e36-4c69-adf1-b50f9c74c234"
                 },
                 {
-                    "type": "jsonwriter",
+                    "type": "Ext.data.writer.Json",
                     "reference": {
                         "name": "writer",
                         "type": "object"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyJsonWriter1",
                         "writeAllFields": false,
                         "encode": true,
                         "rootProperty": "linhas"

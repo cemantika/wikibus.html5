@@ -6,12 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "model": "Onibus",
-        "storeId": "onibus",
-        "designer|userClassName": "Onibus",
-        "designer|userAlias": "onibus"
+        "model": "Usuario",
+        "storeId": "usuarios",
+        "designer|userClassName": "Usuarios",
+        "designer|userAlias": "usuarios"
     },
-    "designerId": "8eafa648-2e49-4f83-8543-6cb0d7275302",
+    "designerId": "0d004944-43ff-4271-b47a-c0c62d8e6327",
     "cn": [
         {
             "type": "Ext.data.proxy.Ajax",
@@ -23,14 +23,15 @@
             "userConfig": {
                 "api": [
                     "{\r",
-                    "    create: 'php/onibus/criaOnibus.php',\r",
-                    "    read: 'php/onibus/listaOnibus.php',\r",
-                    "    update: 'php/onibus/atualizaOnibus.php',\r",
-                    "    destroy: 'php/onibus/deletaOnibus.php'\r",
+                    "    create: 'php/usuario/criaUsuario.php',\r",
+                    "    read: 'php/usuario/listaUsuario.php',\r",
+                    "    update: 'php/usuario/atualizaUsuario.php',\r",
+                    "    destroy: 'php/usuario/deletaUsuario.php',\r",
+                    "    authenticate: 'php/usuario/autenticaUsuario.php'\r",
                     "}"
                 ]
             },
-            "designerId": "8eaf926e-cc69-46bd-a0c6-71f07e07aff4",
+            "designerId": "fa8b277a-eef5-49ab-aab3-8400a60f7518",
             "cn": [
                 {
                     "type": "Ext.data.reader.Json",
@@ -40,9 +41,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "rootProperty": "onibus"
+                        "rootProperty": "usuarios"
                     },
-                    "designerId": "c4406546-9e22-4038-abff-02870e0d73a0"
+                    "designerId": "d910155c-914d-4bbd-9145-cead18f932d2"
                 },
                 {
                     "type": "Ext.data.writer.Json",
@@ -54,9 +55,9 @@
                     "userConfig": {
                         "writeAllFields": false,
                         "encode": true,
-                        "rootProperty": "onibus"
+                        "rootProperty": "usuarios"
                     },
-                    "designerId": "bafcae00-cdfd-4b18-9415-fcab339fd59b"
+                    "designerId": "1f32f4ce-423f-4a8d-9177-07e75cc1338b"
                 }
             ]
         }

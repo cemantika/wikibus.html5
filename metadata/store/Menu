@@ -1,17 +1,23 @@
 {
-    "type": "store",
+    "type": "Ext.data.Store",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Menu",
-        "designer|userAlias": "menu",
-        "data": "[\r\n    {\"item\": \"Linhas\", \"view\": \"linha\"},   \r\n    {\"item\": \"Pontos\", \"view\": \"ponto\"},\r\n    {\"item\": \"Onibus\", \"view\": \"onibus\"},\r\n    {\"item\": \"Empresas\", \"view\": \"empresa\"}\r\n]",
+        "data": [
+            "[\r",
+            "    {\"item\": \"Linhas\", \"view\": \"linha\"},   \r",
+            "    {\"item\": \"Pontos\", \"view\": \"ponto\"},\r",
+            "    {\"item\": \"Onibus\", \"view\": \"onibus\"},\r",
+            "    {\"item\": \"Empresas\", \"view\": \"empresa\"}\r",
+            "]"
+        ],
         "model": "Menu",
-        "storeId": "menu"
+        "storeId": "menu",
+        "designer|userClassName": "Menu",
+        "designer|userAlias": "menu"
     },
-    "id": "ExtBox1-ext-gen64894",
     "designerId": "0e473bba-33c9-4c05-8def-b1074c50bc6c"
 }

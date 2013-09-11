@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Posicao",
-        "designer|userAlias": "posicao"
+        "designer|userClassName": "Usuario",
+        "designer|userAlias": "usuario"
     },
-    "designerId": "72e20f46-eb9e-44d4-928b-2647475078e2",
+    "designerId": "8af90382-8f20-4df5-87c3-18a60eb5b495",
     "cn": [
         {
             "type": "Ext.data.Field",
@@ -19,10 +19,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id_posicao",
-                "type": "int"
+                "name": "id_usuario"
             },
-            "designerId": "630bcee3-1b01-4df1-8efb-e8eec12be419"
+            "designerId": "f29b065e-f0a8-4b99-a9f1-6c7423189ecb"
         },
         {
             "type": "Ext.data.Field",
@@ -32,10 +31,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "latitude",
-                "type": "float"
+                "name": "nome"
             },
-            "designerId": "7c0ba102-1e1a-4a55-9409-34590146b2dd"
+            "designerId": "449b2302-9af1-4d36-9061-0cc2cf386194"
         },
         {
             "type": "Ext.data.Field",
@@ -45,10 +43,21 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "longitude",
-                "type": "float"
+                "name": "email"
             },
-            "designerId": "436519f2-ad07-4b16-bfcc-30affba8a78d"
+            "designerId": "d6107082-04e0-407e-b582-3ad7e06c9177"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "senha"
+            },
+            "designerId": "3ac46515-bd34-445f-9f40-1a575d54f3da"
         }
     ]
 }

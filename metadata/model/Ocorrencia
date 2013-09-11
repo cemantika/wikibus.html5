@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,74 +9,68 @@
         "designer|userClassName": "Ocorrencia",
         "designer|userAlias": "ocorrencia"
     },
-    "id": "ExtBox1-ext-gen91198",
     "designerId": "647a094f-ecdf-4b24-a568-81ef86f94d49",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field33",
                 "name": "id_ocorrencia",
                 "type": "int"
             },
             "designerId": "62b93be7-e202-425a-b752-c65bdf1a39a0"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field34",
                 "name": "id_origem_ocorrencia",
                 "type": "int"
             },
             "designerId": "8c1a4d5c-a7c2-4e25-b7a0-83edd3780b35"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field35",
                 "name": "identificador",
                 "type": "string"
             },
             "designerId": "4c078506-45b8-4a0a-bb58-35f0b3825f36"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field37",
                 "name": "tipo_ocorrencia",
                 "type": "string"
             },
             "designerId": "2ec01b27-fe0e-499b-8907-94889e5112b3"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field36",
                 "name": "descricao",
                 "type": "string"
             },

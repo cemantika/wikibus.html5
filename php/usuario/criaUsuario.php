@@ -2,16 +2,16 @@
 	//chama o arquivo de conexão com o bd
 	include("../conectar.php");
 
-	$info = $_POST['usuario'];
+	$info = $_POST['usuarios'];
 
 	$data = json_decode(stripslashes($info));
 
 	$nome = $data->nome;
-	$email = $email->email;
+	$email = $data->email;
 	$senha = $data->senha;
 	
 	//consulta sql
-	$query = sprintf("INSERT INTO usuario (nome, email, senha) values (%s, %s, '%s')",
+	$query = sprintf("INSERT INTO usuario (nome, email, senha) values ('%s', '%s', '%s')",
 		mysql_real_escape_string($nome),
 		mysql_real_escape_string($email),
 		mysql_real_escape_string($senha)		

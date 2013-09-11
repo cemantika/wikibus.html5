@@ -1,15 +1,13 @@
-CREATE DATABASE  IF NOT EXISTS `wikibus` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `wikibus`;
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tempo de Geração: 
--- Versão do Servidor: 5.5.28
--- Versão do PHP: 5.4.7
+-- Host: localhost
+-- Generation Time: Sep 11, 2013 at 04:58 PM
+-- Server version: 5.6.12
+-- PHP Version: 5.5.0
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `wikibus`
+-- Database: `wikibus`
 --
+CREATE DATABASE IF NOT EXISTS `wikibus` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wikibus`;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `empresa`
+-- Table structure for table `empresa`
 --
 
 CREATE TABLE IF NOT EXISTS `empresa` (
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `empresa` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
 
 --
--- Extraindo dados da tabela `empresa`
+-- Dumping data for table `empresa`
 --
 
 INSERT INTO `empresa` (`id_empresa`, `nome`) VALUES
@@ -57,7 +57,7 @@ INSERT INTO `empresa` (`id_empresa`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `itinerario`
+-- Table structure for table `itinerario`
 --
 
 CREATE TABLE IF NOT EXISTS `itinerario` (
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `itinerario` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Extraindo dados da tabela `itinerario`
+-- Dumping data for table `itinerario`
 --
 
 INSERT INTO `itinerario` (`id_linha`, `id_ponto`, `id_ponto_anterior`, `data_atualizacao`, `sequencia`) VALUES
@@ -192,7 +192,7 @@ INSERT INTO `itinerario` (`id_linha`, `id_ponto`, `id_ponto_anterior`, `data_atu
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `linha`
+-- Table structure for table `linha`
 --
 
 CREATE TABLE IF NOT EXISTS `linha` (
@@ -203,10 +203,10 @@ CREATE TABLE IF NOT EXISTS `linha` (
   `via` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'R1, R2, Via Jorge Amado...',
   PRIMARY KEY (`id_linha`),
   UNIQUE KEY `id_linha` (`id_linha`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
 
 --
--- Extraindo dados da tabela `linha`
+-- Dumping data for table `linha`
 --
 
 INSERT INTO `linha` (`id_linha`, `numero`, `origem`, `destino`, `via`) VALUES
@@ -225,12 +225,18 @@ INSERT INTO `linha` (`id_linha`, `numero`, `origem`, `destino`, `via`) VALUES
 (13, '1320', 'Pau da Lima', 'Nordeste', ''),
 (14, '1125', 'Doron', 'Barra R1', ''),
 (15, '1', '', '', ''),
-(16, '1020', 'Cabula', 'Su00e3o Joaquim', 'Casa de Denildo');
+(16, '1020', 'Cabula', 'Su00e3o Joaquim', 'Casa de Denildo'),
+(17, '', '', '', ''),
+(18, '0213', 'Ribeira', 'Federau00e7u00e3o', 'Caminho de Areia'),
+(19, '1212', 'ssd', 'assa', 'asa'),
+(20, '1212s', 'as', 'sda', 'as'),
+(21, '1212', 'ssd', 'assa', 'asa'),
+(22, '1212a', 'asd', 'asd', 'asdadsada');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `onibus`
+-- Table structure for table `onibus`
 --
 
 CREATE TABLE IF NOT EXISTS `onibus` (
@@ -243,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `onibus` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
--- Extraindo dados da tabela `onibus`
+-- Dumping data for table `onibus`
 --
 
 INSERT INTO `onibus` (`id_onibus`, `id_empresa`, `numero`, `adaptado`) VALUES
@@ -260,7 +266,27 @@ INSERT INTO `onibus` (`id_onibus`, `id_empresa`, `numero`, `adaptado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ponto`
+-- Table structure for table `perfil_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `perfil_usuario` (
+  `id_perfil` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id do perfil',
+  `nome` varchar(20) NOT NULL COMMENT 'Descrição do perfil',
+  PRIMARY KEY (`id_perfil`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Tabela que armazena os perfis de usuário.' AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `perfil_usuario`
+--
+
+INSERT INTO `perfil_usuario` (`id_perfil`, `nome`) VALUES
+(1, 'Moderador'),
+(2, 'Visitante');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ponto`
 --
 
 CREATE TABLE IF NOT EXISTS `ponto` (
@@ -280,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `ponto` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=307 ;
 
 --
--- Extraindo dados da tabela `ponto`
+-- Dumping data for table `ponto`
 --
 
 INSERT INTO `ponto` (`id_ponto`, `latitude`, `longitude`, `numero`, `logradouro`, `bairro`, `cidade`, `estado`, `pais`, `cep`, `referencia`) VALUES
@@ -590,7 +616,7 @@ INSERT INTO `ponto` (`id_ponto`, `latitude`, `longitude`, `numero`, `logradouro`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -598,15 +624,26 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `nome` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `id_perfil` int(11) NOT NULL DEFAULT '2' COMMENT 'Id do perfil do usuário',
   PRIMARY KEY (`id_usuario`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=25 ;
 
 --
--- Extraindo dados da tabela `usuario`
+-- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`) VALUES
-(1, 'admin', 'admin', 'admin');
+INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `id_perfil`) VALUES
+(1, 'admin', 'admin', 'admin', 2),
+(15, 'joao', 'joao', 'joao', 2),
+(16, '', '', '', 2),
+(17, '', '', '', 2),
+(18, '', '', '', 2),
+(19, '', '', '', 2),
+(20, '', '', '', 2),
+(21, '', '', '', 2),
+(22, '', '', '', 2),
+(23, 'jose', 'jose', 'jose', 2),
+(24, 'jose', 'jose', 'jose', 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,130 +9,120 @@
         "designer|userClassName": "Itinerario",
         "designer|userAlias": "itinerario"
     },
-    "id": "ExtBox1-ext-gen77809",
     "designerId": "2cf64afe-96e1-4997-95b7-e04beec1311c",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field27",
                 "name": "id_itinerario",
                 "type": "int"
             },
             "designerId": "ee4c5653-5913-4b78-83cf-a3ac74d843c8"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field28",
                 "name": "id_linha",
                 "type": "int"
             },
             "designerId": "9278f731-e486-46b4-aad6-64fbd81c9785"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field29",
                 "name": "id_ponto",
                 "type": "int"
             },
             "designerId": "d1fbe7a2-b87d-4bd0-810c-fa148bfeac45"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field30",
                 "name": "id_ponto_anterior",
                 "type": "int"
             },
             "designerId": "1340dd4e-f39b-48e6-a170-d936bb25202a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field31",
                 "name": "sequencia",
                 "type": "int"
             },
             "designerId": "0074c4a9-ab59-485e-85ed-6bbbb2a5d36a"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field32",
                 "name": "numero",
                 "type": "string"
             },
             "designerId": "c439d760-b840-4277-91f4-60351c7acfc5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field38",
                 "name": "origem",
                 "type": "string"
             },
             "designerId": "40f2f92f-498c-49c2-b765-37dd5824063b"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field39",
                 "name": "destino",
                 "type": "string"
             },
             "designerId": "d029a585-b24b-461f-a004-5771437b2e36"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field40",
                 "name": "via",
                 "type": "string"
             },

@@ -1,29 +1,27 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Onibus",
-        "designer|userAlias": "onibus",
         "id": "onibusView",
         "width": null,
+        "designer|userClassName": "Onibus",
+        "designer|userAlias": "onibus",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen20472",
     "designerId": "d48a4598-e3d5-4387-b959-7f9124fce8f2",
     "cn": [
         {
-            "type": "toolbar",
+            "type": "Ext.Toolbar",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyToolbar1",
                 "docked": "top",
                 "hidden": true,
                 "id": "toolbarOnibus",
@@ -32,14 +30,13 @@
             "designerId": "63ac249f-d973-453f-bd70-d0e02a13526a"
         },
         {
-            "type": "fieldset",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFieldSet1",
                 "id": "fieldPesquisaOnibus",
                 "padding": null,
                 "layout": null,
@@ -49,14 +46,13 @@
             "designerId": "e61bab88-bc92-402d-b0a5-64e5627e5f87",
             "cn": [
                 {
-                    "type": "searchfield",
+                    "type": "Ext.field.Search",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MySearchField",
                         "id": "numeroOnibus",
                         "itemId": null,
                         "label": null,
@@ -74,7 +70,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "onMysearchfield1Clearicontap",
                                 "fn": "onMysearchfield1Clearicontap",
                                 "implHandler": [
                                     "//Limpa os campos do formulário\r",
@@ -92,14 +87,13 @@
             ]
         },
         {
-            "type": "button",
+            "type": "Ext.Button",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton4",
                 "id": "btnOnibusPesquisar",
                 "ui": "action",
                 "iconAlign": "center",

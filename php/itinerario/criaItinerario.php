@@ -1,7 +1,7 @@
 <?php
 	//chama o arquivo de conexão com o bd
 	include("../conectar.php");
-
+	echo "<script>alert('Mensagem');</script>";
 	$info = $_POST['itinerarios'];
 
 	$data = json_decode(stripslashes($info));

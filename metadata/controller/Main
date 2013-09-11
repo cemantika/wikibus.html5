@@ -1,20 +1,20 @@
 {
-    "type": "controller",
+    "type": "Ext.app.Controller",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Main",
-        "designer|userAlias": "main",
         "stores": [
             "Onibus",
             "Pontos",
-            "Linha"
-        ]
+            "Linha",
+            "Usuarios"
+        ],
+        "designer|userClassName": "Main",
+        "designer|userAlias": "main"
     },
-    "id": "ExtBox1-ext-gen16178",
     "designerId": "c254763d-7431-49c7-a395-7f62e3508904",
     "cn": [
         {
@@ -25,7 +25,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "salvarEmpresa",
                 "fn": "salvarEmpresa",
                 "implHandler": [
                     "Ext.Msg.prompt(null, \r",
@@ -73,7 +72,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "empresa",
                 "ref": "empresa",
                 "selector": "empresa"
             },
@@ -87,7 +85,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "salvarOnibus",
                 "fn": "salvarOnibus",
                 "implHandler": [
                     "var dadosOnibus = this.getOnibusForm().getValues();\r",
@@ -161,7 +158,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "salvarLinha",
                 "fn": "salvarLinha",
                 "implHandler": [
                     "var dadosLinha = this.getLinhaForm().getValues();\r",
@@ -232,7 +228,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "pesquisarOnibus",
                 "fn": "pesquisarOnibus",
                 "implHandler": [
                     "\r",
@@ -283,6 +278,15 @@
                     "            Ext.getCmp('btnSalvarOnibus').setHidden(true);\r",
                     "\r",
                     "            Ext.getCmp('formOnibus').setHidden(false);\r",
+                    "            \r",
+                    "            //Exibe ou não o botão de remover.\r",
+                    "            var sessionObject = localStorage.getItem('sessionObject');            \r",
+                    "            var perfilModerador = JSON.parse(sessionObject).perfilModerador;\r",
+                    "            var esconder = !perfilModerador;\r",
+                    "\r",
+                    "            Ext.getCmp('btnOnibusExcluir').setHidden(esconder);\r",
+                    "\r",
+                    "            \r",
                     "\r",
                     "        }else{//Onibus não encontrado\r",
                     "\r",
@@ -337,7 +341,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onibusView",
                 "ref": "onibusView",
                 "selector": "#onibusView"
             },
@@ -351,7 +354,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onibusForm",
                 "ref": "onibusForm",
                 "selector": "#onibusForm"
             },
@@ -365,7 +367,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "navegador",
                 "ref": "navegador",
                 "selector": "navegadoronibus"
             },
@@ -379,7 +380,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "pesquisarLinha",
                 "fn": "pesquisarLinha",
                 "implHandler": [
                     "var dadosLinha = this.getLinhaView().getValues();\r",
@@ -430,6 +430,15 @@
                     "            Ext.getCmp('btnSalvarLinha').setHidden(true);\r",
                     "\r",
                     "            Ext.getCmp('formLinha').setHidden(false);\r",
+                    "\r",
+                    "\r",
+                    "            //Exibe ou não o botão de remover.\r",
+                    "            var sessionObject = localStorage.getItem('sessionObject');            \r",
+                    "            var perfilModerador = JSON.parse(sessionObject).perfilModerador;\r",
+                    "            var esconder = !perfilModerador;\r",
+                    "\r",
+                    "            Ext.getCmp('btnLinhaExcluir').setHidden(esconder);\r",
+                    "\r",
                     "\r",
                     "        }else{//Linha não encontrado\r",
                     "\r",
@@ -485,7 +494,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "exibeOcorrencia",
                 "fn": "exibeOcorrencia",
                 "implHandler": [
                     "//console.log(Ext.Viewport.getActiveItem());\r",
@@ -520,7 +528,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "exibeOcorrenciaLinha",
                 "fn": "exibeOcorrenciaLinha",
                 "implHandler": [
                     "//console.log(Ext.Viewport.getActiveItem());\r",
@@ -556,7 +563,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "selecionaEmpresa",
                 "fn": "selecionaEmpresa",
                 "implHandler": [
                     "this.getNavegador().push({\r",
@@ -578,7 +584,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "navegadorLinha",
                 "ref": "navegadorLinha",
                 "selector": "navegadorlinha"
             },
@@ -592,7 +597,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "linhaView",
                 "ref": "linhaView",
                 "selector": "#linhaView"
             },
@@ -606,7 +610,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "linhaForm",
                 "ref": "linhaForm",
                 "selector": "#linhaForm"
             },
@@ -620,7 +623,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onListItemTap",
                 "fn": "onListItemTap",
                 "implHandler": [
                     "this.getNavHome().push({\r",
@@ -642,7 +644,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "navHome",
                 "ref": "navHome",
                 "selector": "navhome"
             },
@@ -656,7 +657,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "exibeMapaLinha",
                 "fn": "exibeMapaLinha",
                 "implHandler": [
                     "numeroLinha = this.getLinhaView().getValues().numeroLinha;\r",
@@ -749,7 +749,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "pontodetalhe",
                 "ref": "pontodetalhe",
                 "selector": "pontodetalhe"
             },
@@ -763,7 +762,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "sugereItinerario",
                 "fn": "sugereItinerario",
                 "implHandler": [
                     "//Cria o model com os dados da linha sugerida\r",
@@ -806,7 +804,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "listalinhas",
                 "ref": "listalinhas",
                 "selector": "listalinhas"
             },
@@ -820,7 +817,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "exibeOcorrenciaPonto",
                 "fn": "exibeOcorrenciaPonto",
                 "implHandler": [
                     "this.getNavHome().push({\r",
@@ -853,11 +849,118 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "mapa",
                 "ref": "mapa",
                 "selector": "mapa"
             },
             "designerId": "24ba2948-5eb0-461c-bd03-2bfccbd8dc75"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "confirmarUsuario",
+                "implHandler": [
+                    "//Cria o model com os dados do usuario a ser cadastrado\r",
+                    "var dados = Ext.create('model.usuario', {            \r",
+                    "    nome: Ext.getCmp('txtUsuarioNome').getValue(),\r",
+                    "    email: Ext.getCmp('txtUsuarioEmail').getValue(),\r",
+                    "    senha: Ext.getCmp('txtUsuarioSenha').getValue()\r",
+                    "});\r",
+                    "\r",
+                    "var storeUsuario = Ext.getStore('usuarios');\r",
+                    "\r",
+                    "var nome_botao = button.getText();\r",
+                    "\r",
+                    "var sessionObject = { 'perfilModerador': false };\r",
+                    "\r",
+                    "if(nome_botao == 'Logar'){\r",
+                    "    storeUsuario.load\r",
+                    "    //Trecho a ser removido!!!! Apenas para exemplificar o login do \r",
+                    "    var email = Ext.getCmp('txtUsuarioEmail').getValue();\r",
+                    "    if (email == 'admin'){\r",
+                    "        sessionObject = { 'perfilModerador': true };\r",
+                    "    }else{\r",
+                    "        sessionObject = { 'perfilModerador': false };\r",
+                    "    }\r",
+                    "    \r",
+                    "    Ext.getCmp('lblLinhaStatusUsuario').setHtml('Usuário autenticado!   ;)');\r",
+                    "    \r",
+                    "    //Fix-me!! O perfil de moderador deve ser obtido via consulta à base, através de script php!\r",
+                    "    //var usuarioLogado = usuario retornado do login\r",
+                    "    //if (usuarioLogado.idPerfil == 1){\r",
+                    "    //sessionObject = { 'perfilModerador': true };\r",
+                    "    //}else{\r",
+                    "    //sessionObject = { 'perfilModerador': false };\r",
+                    "    //}\r",
+                    "\r",
+                    "\r",
+                    "    //log the session object\r",
+                    "    localStorage.setItem('sessionObject', JSON.stringify(sessionObject ));\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "}else{\r",
+                    "\r",
+                    "    \r",
+                    "\r",
+                    "    storeUsuario.removeAll();\r",
+                    "\r",
+                    "    storeUsuario.add(dados);\r",
+                    "\r",
+                    "    storeUsuario.sync();\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "usuario #btnUsuarioConfirmar"
+            },
+            "designerId": "503aac67-2f6f-4858-a3b1-8d8e3dab0df7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "usuario",
+                "selector": "#usuario"
+            },
+            "designerId": "603eeec7-d0b8-47a4-844c-515ca3467939"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "excluirLinha",
+                "implHandler": [
+                    "var dadosLinha = this.getLinhaForm().getValues();\r",
+                    "\r",
+                    "var storeLinha = Ext.getStore('linha');\r",
+                    "\r",
+                    "//limpa o store antes de enviar os dados\r",
+                    "storeLinha.removeAll();\r",
+                    "//alert(dadosLinha.id_linha);\r",
+                    "//adiciona dados e envia pro servidor excluir\r",
+                    "storeLinha.remove(dadosLinha);\r",
+                    "\r",
+                    "storeLinha.sync();\r",
+                    "//alert(JSON.stringify(dadosLinha));"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "linhaform #btnLinhaExcluir"
+            },
+            "designerId": "2897109d-2d66-4d67-818e-79afd6b40c53"
         }
     ]
 }

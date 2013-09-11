@@ -1,28 +1,26 @@
 {
-    "type": "formpanel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "id": "pontoDetalhe",
         "designer|userClassName": "PontoDetalhe",
         "designer|userAlias": "pontodetalhe",
-        "id": "pontoDetalhe",
         "layout": "vbox"
     },
-    "id": "ExtBox1-ext-gen39769",
     "designerId": "edde6100-3a0e-452e-9af2-c6e186bb696b",
     "cn": [
         {
-            "type": "label",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLabel2",
                 "docked": null,
                 "hidden": true,
                 "html": "status da pesquisa",
@@ -32,20 +30,19 @@
             "designerId": "e31aad11-21c7-4aa7-bc37-d5279e1dece1"
         },
         {
-            "type": "spacer",
+            "type": "Ext.Spacer",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MySpacer",
                 "height": 10
             },
             "designerId": "1207793a-18d3-459b-9492-a47e4bc24b76"
         },
         {
-            "type": "segmentedbutton",
+            "type": "Ext.SegmentedButton",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -54,7 +51,6 @@
             "userConfig": {
                 "container|align": "center",
                 "container|pack": "center",
-                "designer|userClassName": "MySegmentedButton",
                 "id": "opcoesPontoLinha",
                 "itemId": "mysegmentedbutton1",
                 "defaults": [
@@ -65,14 +61,13 @@
             "designerId": "d3c3d3bd-aea3-4eaf-bbee-c4dcc6be320f",
             "cn": [
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
                         "id": "btnPontoOcorrencia",
                         "iconCls": "info",
                         "iconMask": true,
@@ -81,14 +76,13 @@
                     "designerId": "6924f268-783d-4116-9019-164623d9cc52"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton22",
                         "hidden": true,
                         "id": "btnPontoHidden",
                         "text": null
@@ -96,14 +90,13 @@
                     "designerId": "b67b46fb-868b-4db5-897c-f3d801417362"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
                         "id": "btnPontoFavorito",
                         "iconCls": "star",
                         "iconMask": true,
@@ -112,14 +105,13 @@
                     "designerId": "d09fc06f-717a-46e6-9cb2-bdabe1d17195"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
                         "id": "btnPontoEditar",
                         "itemId": null,
                         "iconCls": "search",
@@ -129,14 +121,13 @@
                     "designerId": "cf93da48-e1e0-4079-b2f0-f000126d1204"
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton2",
                         "hidden": true,
                         "id": "btnPontoPesquisarLinha",
                         "iconCls": "search",
@@ -153,7 +144,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onOpcoesOnibusToggle",
                         "fn": "onOpcoesOnibusToggle",
                         "implHandler": [
                             "//Variavel que habilita os campos do formulario apenas quando 'btnPontoEditar' estiver ativo\r",
@@ -191,7 +181,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -199,7 +189,6 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
-                "designer|userClassName": "MyContainer",
                 "height": 145,
                 "hidden": true,
                 "id": "containerPontoInfo",
@@ -208,14 +197,13 @@
             "designerId": "f9d165d9-8fe5-42ce-bc72-b3ff2f7a81f5",
             "cn": [
                 {
-                    "type": "fieldset",
+                    "type": "Ext.form.FieldSet",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet",
                         "id": "infoPontoLinha",
                         "defaults": [
                             "{disabled: false}"
@@ -227,15 +215,13 @@
                     "designerId": "58f47838-df69-42f9-b39d-b8e552aebe65",
                     "cn": [
                         {
-                            "type": "textfield",
+                            "type": "Ext.field.Text",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": 4,
-                                "designer|userClassName": "MyTextField",
                                 "id": "txtItinerarioNumeroLinha",
                                 "itemId": "mytextfield5",
                                 "label": null,
@@ -253,7 +239,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onTxtNumeroLinhaKeyup",
                                         "fn": "onTxtNumeroLinhaKeyup",
                                         "implHandler": [
                                             "var queryString = textfield.getValue();\r",
@@ -296,7 +281,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "onTxtNumeroLinhaClearicontap",
                                         "fn": "onTxtNumeroLinhaClearicontap",
                                         "implHandler": [
                                             "var store = Ext.getCmp('listalinhas').getStore();\r",
@@ -313,14 +297,13 @@
                     ]
                 },
                 {
-                    "type": "button",
+                    "type": "Ext.Button",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyButton38",
                         "hidden": true,
                         "id": "btnItinerarioSugerir",
                         "style": "margin-top:-20px;",
@@ -331,7 +314,7 @@
             ]
         },
         {
-            "type": "container",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -339,8 +322,6 @@
             "codeClass": null,
             "userConfig": {
                 "layout|flex": 1,
-                "designer|userClassName": "MyContainer4",
-                "designer|userAlias": "mycontainer4",
                 "id": "containerPontoLinhas",
                 "style": "margin:-10px;",
                 "ui": "",
@@ -360,17 +341,16 @@
                         "style": "font-size:80%;"
                     },
                     "designerId": "699e0bb7-3c76-4e42-8034-cc89c3eceb53",
-                    "masterInstanceId": "ExtBox1-ext-gen87053"
+                    "masterInstanceId": "70e0ec29-399d-48f4-b90b-6f44cae54c8a"
                 },
                 {
-                    "type": "label",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyLabel2",
                         "docked": "top",
                         "height": null,
                         "html": "Linhas servindo este ponto",

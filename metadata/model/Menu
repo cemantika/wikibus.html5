@@ -1,5 +1,5 @@
 {
-    "type": "datamodel",
+    "type": "Ext.data.Model",
     "reference": {
         "name": "items",
         "type": "array"
@@ -9,32 +9,29 @@
         "designer|userClassName": "Menu",
         "designer|userAlias": "menu"
     },
-    "id": "ExtBox1-ext-gen56217",
     "designerId": "6c5ba7e8-18a6-4bdf-83fb-d6bbcf9b0ab8",
     "cn": [
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field25",
                 "name": "item",
                 "type": "string"
             },
             "designerId": "1197e172-faaf-4a0b-a2f6-bd74c47c14a5"
         },
         {
-            "type": "datafield",
+            "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "field26",
                 "name": "view",
                 "type": "string"
             },

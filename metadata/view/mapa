@@ -1,5 +1,5 @@
 {
-    "type": "map",
+    "type": "Ext.Map",
     "reference": {
         "name": "items",
         "type": "array"
@@ -22,7 +22,6 @@
             "}"
         ]
     },
-    "id": "ExtBox1-ext-gen32125",
     "designerId": "dc212b51-103b-4092-8655-f7bfa955cc9c",
     "customConfigs": [
         {
@@ -40,7 +39,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onMapMaprender",
                 "fn": "onMapMaprender",
                 "implHandler": [
                     "var image = 'app/images/posicaoAtual.png';\r",
@@ -52,7 +50,7 @@
                     "if(navigator.geolocation) {\r",
                     "    navigator.geolocation.getCurrentPosition(function(position) {\r",
                     "        var pos = new google.maps.LatLng(position.coords.latitude,\r",
-                    "        position.coords.longitude);\r",
+                    "            position.coords.longitude);\r",
                     "        latLng = pos;\r",
                     "\r",
                     "        //that.placeMarker(pos, gmap);\r",
@@ -138,7 +136,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onMapInitialize",
                 "fn": "onMapInitialize",
                 "implHandler": [
                     ""
@@ -155,7 +152,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "handleNoGeolocation",
                 "fn": "handleNoGeolocation",
                 "designer|params": [
                     "browserSupportFlag"
@@ -178,7 +174,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "placeMarker",
                 "fn": "placeMarker",
                 "designer|params": [
                     "location",
@@ -414,7 +409,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "geoCodePosition",
                 "fn": "geoCodePosition",
                 "designer|params": [
                     "pos",
@@ -489,7 +483,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "processaPontos",
                 "fn": "processaPontos",
                 "designer|params": [
                     "listaPontos",

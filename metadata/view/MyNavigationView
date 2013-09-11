@@ -1,0 +1,13 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyNavigationView",
+        "designer|userAlias": "mynavigationview"
+    },
+    "designerId": "74274cde-ca8b-480e-a134-6749694613fa"
+}
