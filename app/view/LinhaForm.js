@@ -153,6 +153,10 @@ Ext.define('Ubibus.view.LinhaForm', {
                 fn: 'onOpcoesLinhaToggle',
                 event: 'toggle',
                 delegate: '#opcoesLinha'
+            },
+            {
+            	fn: 'onInitialize',
+            	event: 'initialize'
             }
         ]
     },
@@ -187,6 +191,26 @@ Ext.define('Ubibus.view.LinhaForm', {
 
         //Exibe o botão de 'Salvar'
         Ext.getCmp('btnSalvarLinha').setHidden(habilitaCamposForm);
+    },
+    
+    onInitialize: function(component, options) {
+    	Ext.Ajax.request({
+    	    url: 'php/favorito/get.php',
+    	    method: 'GET',    
+    	    params: {
+    	        id_usuario: idUsuario,
+    	        tipo: 'L',
+    	        id_entidade: numeroPesquisado
+    	    },
+    	
+    	    callback: function(options, success, response) {
+    	    	var response_obj = Ext.decode(response.responseText);
+    	    	if(response_obj['favoritos'] > 0) {
+    	    		var favoritoBt = Ext.getCmp('btnLinhaFavorito');
+    	    		Ext.getCmp('opcoesLinha').setPressedButtons([favoritoBt]);    	    		
+    	    	}
+    	    }
+    	});
     }
 
 });

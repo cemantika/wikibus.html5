@@ -9,7 +9,7 @@ $servidor = "127.0.0.1";
 $user = "root";
 
 //senha do banco de dados
-$senha = "";
+$senha = "test";
 
 //nome da base de dados
 $db = "wikibus";

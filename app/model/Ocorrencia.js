@@ -24,21 +24,46 @@ Ext.define('Ubibus.model.Ocorrencia', {
                 type: 'int'
             },
             {
-                name: 'id_origem_ocorrencia',
+                name: 'id_usuario',
+                type: 'int'
+            },
+            {           	
+            	name: 'tipo_entidade',
+            	type: 'char'
+            },
+            {
+                name: 'id_entidade',
                 type: 'int'
             },
             {
-                name: 'identificador',
-                type: 'string'
+                name: 'data',
+                type: 'date'
             },
             {
-                name: 'tipo_ocorrencia',
-                type: 'string'
+                name: 'tipo',
+                type: 'char'
             },
             {
                 name: 'descricao',
                 type: 'string'
+            },
+            {
+                name: 'nome',
+                type: 'string'
+            },
+        ],
+        proxy: {
+            type: 'rest',
+            url : 'php/ocorrencia/post.php',
+            reader: {
+                type: 'json',
+                rootProperty: 'ocorrencia'
+            },
+            writer: {
+            	type: 'json',
+            	rootProperty: 'ocorrencia',
+                encode: true
             }
-        ]
+        }
     }
 });

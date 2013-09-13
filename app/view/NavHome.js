@@ -64,6 +64,16 @@ Ext.define('Ubibus.view.NavHome', {
                     iconCls: 'add',
                     iconMask: true,
                     text: ''
+                },
+                {
+                    xtype: 'button',
+                    align: 'right',
+                    hidden: true,
+                    id: 'btnRefreshFeed',
+                    itemId: 'refreshFeed',
+                    iconCls: 'refresh',
+                    iconMask: true,
+                    text: ''
                 }
             ]
         },
@@ -77,7 +87,7 @@ Ext.define('Ubibus.view.NavHome', {
     },
 
     onBtnNavConfigTap: function(button, e, options) {
-        var tela = Ext.getCmp('home-view').getActiveItem().id;
+        var tela = Ext.getCmp('homePort').getActiveItem().id;
 
         switch(tela){
             case 'ponto':

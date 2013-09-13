@@ -24,6 +24,10 @@ Ext.define('Ubibus.store.Menu', {
     config: {
         data: [
             {
+                item: 'Novidades',
+                view: 'feed'
+            },
+            {
                 item: 'Linhas',
                 view: 'linha'
             },

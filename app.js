@@ -26,7 +26,8 @@ Ext.application({
         'Linha',
         'Menu',
         'Itinerario',
-        'Ocorrencia'
+        'Ocorrencia',
+        'Favorito'
     ],
     stores: [
         'Empresas',
@@ -34,7 +35,9 @@ Ext.application({
         'Pontos',
         'Linha',
         'Menu',
-        'Itinerarios'
+        'Itinerarios',
+        'Favoritos',
+        'Ocorrencia'
     ],
     views: [
         'Empresa',
@@ -54,7 +57,8 @@ Ext.application({
         'Indicadores',
         'ToolbarMapa',
         'PontoDetalhe',
-        'ListaLinhas'
+        'ListaLinhas',
+        'Feed'
     ],
     name: 'Ubibus',
     controllers: [

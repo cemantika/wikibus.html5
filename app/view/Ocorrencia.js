@@ -81,6 +81,7 @@ Ext.define('Ubibus.view.Ocorrencia', {
                 ]
             },
             {
+            	id: 'tipoOcorrencia',
                 xtype: 'fieldset',
                 style: 'margin-top:-20px;',
                 ui: '',
@@ -92,7 +93,7 @@ Ext.define('Ubibus.view.Ocorrencia', {
                         labelAlign: 'right',
                         labelWidth: '75%',
                         name: 'tipo_ocorrencia',
-                        value: 'reclamacao'
+                        value: 'R'
                     },
                     {
                         xtype: 'radiofield',
@@ -100,7 +101,7 @@ Ext.define('Ubibus.view.Ocorrencia', {
                         labelAlign: 'right',
                         labelWidth: '75%',
                         name: 'tipo_ocorrencia',
-                        value: 'elogio'
+                        value: 'E'
                     },
                     {
                         xtype: 'radiofield',
@@ -108,7 +109,7 @@ Ext.define('Ubibus.view.Ocorrencia', {
                         labelAlign: 'right',
                         labelWidth: '75%',
                         name: 'tipo_ocorrencia',
-                        value: 'sugestao'
+                        value: 'S'
                     },
                     {
                         xtype: 'textareafield',
@@ -187,11 +188,58 @@ Ext.define('Ubibus.view.Ocorrencia', {
         "Deseja registrar esta ocorrência?",
         function(buttonId) {
             if(buttonId === 'yes') {
-                Ext.Msg.alert('Obrigado', 'Sua ocorrência foi registrada com sucesso!', Ext.emptyFn);
+            	var tipo_ent = '';
+            	var id_ent = 0;
+            	var selected = Ext.getCmp('selectOcorrenciaOrigem').getValue();
+                switch(selected){
+                  case 1: //Linha
+                	  tipo_ent = 'L';
+                	  id_ent = numeroLinha;
+                  break;
+                  case 2: //Ponto
+                	  tipo_ent = 'P';
+                	  id_ent = pontoAtual;
+                  break;
+                  case 3: //Onibus
+                	  tipo_ent = 'O';
+                  break;
+                  case 4: //Empresa
+                	  tipo_ent = 'E';
+                  break;
+                  case 5: //Ubibus
+                	  tipo_ent = 'U';
+                  break;
 
-                Ext.getCmp('selectOcorrenciaOrigem').setValue(-1);
+                  default:
 
-                Ext.getCmp('ocorrencia').reset();
+                }
+                var items = Ext.getCmp('tipoOcorrencia').getItems().items;
+                var tipo_ocorrencia = 'S';
+                for (i = 0; i < items.length; i++) {
+                	if(items[i].xtype == 'radiofield' && items[i].isChecked()) {
+                		tipo_ocorrencia = items[i]._value;
+                		break;
+                	}
+                }
+                var descricao_ocorrencia = Ext.getCmp('txtDescricaoOcorrencia').getValue()
+            	var storeOcorrencia = Ext.getStore('ocorrencia');
+                var ocorrencia = Ext.create('model.ocorrencia', {
+                	id_usuario: idUsuario,
+                	tipo_entidade: tipo_ent,
+                	id_entidade: id_ent,
+                	tipo: tipo_ocorrencia,
+                	data: new Date(),
+                	descricao: descricao_ocorrencia
+                });
+                ocorrencia.save({
+                	success: function(ocorrencia) {  		
+                		Ext.Msg.alert('Obrigado', 'Sua ocorrência foi registrada com sucesso!', Ext.emptyFn);
+                		
+                		Ext.getCmp('selectOcorrenciaOrigem').setValue(-1);
+                		
+                		Ext.getCmp('ocorrencia').reset();
+                	}
+                });
             }
         }, 
         this // scope of the controller 

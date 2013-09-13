@@ -608,6 +608,25 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`) VALUES
 (1, 'admin', 'admin', 'admin');
 
+
+CREATE TABLE IF NOT EXISTS favorito (
+  id_usuario INT, 
+  tipo CHAR, 
+  id_entidade INT, 
+  PRIMARY KEY (id_usuario, tipo, id_entidade)
+);
+
+CREATE TABLE IF NOT EXISTS ocorrencia (
+  id_ocorrencia INT AUTO_INCREMENT,
+  id_usuario INT, 
+  tipo_entidade CHAR, 
+  id_entidade INT,
+  data TIMESTAMP,
+  tipo CHAR,
+  descricao VARCHAR(400),
+  PRIMARY KEY (id_ocorrencia)
+);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

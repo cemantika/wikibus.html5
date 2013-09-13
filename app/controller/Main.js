@@ -83,6 +83,15 @@ Ext.define('Ubibus.controller.Main', {
             },
             "pontodetalhe #btnPontoOcorrencia": {
                 tap: 'exibeOcorrenciaPonto'
+            },
+            "pontodetalhe #btnPontoFavorito": {
+            	tap: 'favoritarPonto'
+            },
+            "linhaform #btnLinhaFavorito": {
+            	tap: 'favoritarLinha'
+            },
+            "navhome #btnRefreshFeed" : {
+            	tap: 'refreshFeed'
             }
         }
     },
@@ -95,6 +104,19 @@ Ext.define('Ubibus.controller.Main', {
     	Ext.getCmp('usuarioPort').setDisabled(true);
     	Ext.getCmp('homePort').setDisabled(false);
     	Ext.getCmp('ocorrenciaPort').setDisabled(false);
+        var emailText = Ext.getCmp('txtUsuarioEmail').getValue();
+        var senhaText = Ext.getCmp('txtUsuarioSenha').getValue();
+        Ext.Ajax.request({
+            url: 'php/usuario/logar.php',
+            method: 'POST',
+            params: {
+                email: emailText,
+                senha: senhaText
+            },
+            callback: function(options, success, response) {
+                idUsuario = response.responseText;
+            }
+        });
     },
     
     logout: function(button, e, options) {
@@ -343,6 +365,26 @@ Ext.define('Ubibus.controller.Main', {
 
             }
         });
+    },
+    
+    favoritarPonto: function(button, e, options) {
+        var storeFavoritos = Ext.getStore('favorito');
+        var favorito = Ext.create('model.favorito', {
+        	id_usuario: idUsuario,
+        	tipo: 'P',
+        	id_entidade: pontoAtual
+        });
+        favorito.save()
+    },
+    
+    favoritarLinha: function(button, e, options) {
+    	var storeFavoritos = Ext.getStore('favorito');
+        var favorito = Ext.create('model.favorito', {
+        	id_usuario: idUsuario,
+        	tipo: 'L',
+        	id_entidade: numeroPesquisado
+        });
+        favorito.save()
     },
 
     pesquisarLinha: function(button, e, options) {
@@ -613,6 +655,12 @@ Ext.define('Ubibus.controller.Main', {
 
         //Seta o valor do select field (oculto na tela) com o codigo para onibus
         Ext.getCmp('selectOcorrenciaOrigem').setValue(2);
-    }
+    },
+    
+    refreshFeed: function (button, e, options) {
+    	var storeFeed = Ext.getStore('ocorrencia');
+        storeFeed.getProxy().setExtraParam('id_usuario', idUsuario);
+        storeFeed.load(); 	
+	}
 
 });
