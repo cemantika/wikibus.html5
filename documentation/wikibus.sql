@@ -5,9 +5,9 @@ USE `wikibus`;
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tempo de Gera√ß√£o: 
--- Vers√£o do Servidor: 5.5.28
--- Vers√£o do PHP: 5.4.7
+-- Tempo de GeraÁ„o: 
+-- Vers„o do Servidor: 5.5.28
+-- Vers„o do PHP: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -372,8 +372,8 @@ INSERT INTO `ponto` (`id_ponto`, `latitude`, `longitude`, `numero`, `logradouro`
 (86, -12.952944755554200, -38.460281372070310, '2077-2133', 'R. Silveira Martins', 'Narandiba', 'Salvador', 'Bahia', 'BR', '41150-000', 'UNEB'),
 (87, -12.953567504882812, -38.461620330810550, '2160-2240', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Hiper Bom Preu00e7o Cabula'),
 (88, -12.953560829162598, -38.461357116699220, '2203-2283', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Hiper Bom Preu00e7o Cabula'),
-(89, -12.954287528991700, -38.463428497314450, '2424-2474', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Entrada do S√£o Gon√ßalo'),
-(90, -12.954317092895508, -38.463088989257810, '2385-2465', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Posto Shell / Entrada do S√£o Gon√ßalo'),
+(89, -12.954287528991700, -38.463428497314450, '2424-2474', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Entrada do S„o GonÁalo'),
+(90, -12.954317092895508, -38.463088989257810, '2385-2465', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', 'Posto Shell / Entrada do S„o GonÁalo'),
 (91, -12.957049369812012, -38.464782714843750, '2772-2810', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', '19 BC'),
 (92, -12.957400321960450, -38.464962005615234, '2855-2943', 'R. Silveira Martins', 'Su00e3o Gonu00e7alo', 'Salvador', 'Bahia', 'BR', '41150-000', '19 BC'),
 (93, -12.958162307739258, -38.467250823974610, '3125-3209', 'R. Silveira Martins', 'Cabula', 'Salvador', 'Bahia', 'BR', '41150-000', 'Embasa Cabula'),
@@ -493,8 +493,8 @@ INSERT INTO `ponto` (`id_ponto`, `latitude`, `longitude`, `numero`, `logradouro`
 (209, -12.994338035583496, -38.440673828125000, '', 'Av. Otu00e1vio Mangabeira', 'Costa Azul', 'Salvador', 'Bahia', 'BR', '41760-100', ''),
 (210, -12.992661476135254, -38.439620971679690, '3889-4129', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', ''),
 (211, -12.991952896118164, -38.438686370849610, '', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', 'Ki-Mukeka'),
-(212, -12.988575935363770, -38.435764312744140, '', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', 'Bom Pre√ßo / Sol Plaza / Restaurante Yemanj√°'),
-(213, -12.987867355346680, -38.435455322265625, '4533-4761', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', 'Bom Pre√ßo / Sol Plaza / Restaurante Yemanj√°'),
+(212, -12.988575935363770, -38.435764312744140, '', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', 'Bom PreÁo / Sol Plaza / Restaurante Yemanj·'),
+(213, -12.987867355346680, -38.435455322265625, '4533-4761', 'Av. Otu00e1vio Mangabeira', 'Armau00e7u00e3o', 'Salvador', 'Bahia', 'BR', '41750-240', 'Bom PreÁo / Sol Plaza / Restaurante Yemanj·'),
 (214, -12.982926368713379, -38.433155059814450, '5260-5440', 'Av. Otu00e1vio Mangabeira', 'Boca do Rio', 'Salvador', 'Bahia', 'BR', '41706-690', 'Aeroclube'),
 (215, -12.982654571533203, -38.433238983154300, '4997-5439', 'Av. Otu00e1vio Mangabeira', 'Boca do Rio', 'Salvador', 'Bahia', 'BR', '41706-690', 'Aeroclube'),
 (216, -12.981051445007324, -38.431041717529300, '5442-5662', 'Av. Otu00e1vio Mangabeira', 'Boca do Rio', 'Salvador', 'Bahia', 'BR', '41706-690', ''),
