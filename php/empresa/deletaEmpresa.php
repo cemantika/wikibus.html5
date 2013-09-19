@@ -6,15 +6,15 @@
 
 	$data = json_decode(stripslashes($info));
 
-	$id = $data->id;
+	$id = $data->id_empresa;
 	 
 	//consulta sql
-	$query = sprintf("DELETE FROM Empresa WHERE id=%d",
-		mysql_real_escape_string($id));
+	$query = sprintf("DELETE FROM empresas_permissionarias WHERE id_empresa_permissionaria=%d",
+		pg_escape_string($id));
 
-	$rs = mysql_query($query);
+	$rs = pg_query($query);
 	 
 	echo json_encode(array(
-		"success" => mysql_errno() == 0
+		"success" => pg_error() == 0
 	));
 ?>

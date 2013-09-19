@@ -51,7 +51,8 @@ Ext.define('Ubibus.view.mapa', {
                 var pos = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
                 latLng = pos;
-
+                
+                alert(pos);
                 //that.placeMarker(pos, gmap);
 
                 var marker = new google.maps.Marker({

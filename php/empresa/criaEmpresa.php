@@ -9,15 +9,17 @@
 	$nome = utf8_encode($data->nome);
 	 
 	//consulta sql
-	$query = sprintf("INSERT INTO Empresa (nome) values ('%s')",
-		mysql_real_escape_string($nome));
+	$query = sprintf("INSERT INTO empresas_permissionarias (id_empresa_permissionaria,nome_fantasia) values (nextval('sq_empresas_permissionarias'),'%s') RETURNING id_empresa_permissionaria",
+		pg_escape_string($nome));
 
-	$rs = mysql_query($query);
+	$rs = pg_query($query);
+	$row = pg_fetch_row($rs);
+	$id = $row[0];
 	 
 	echo json_encode(array(
-		"success" => mysql_errno() == 0,
+		"success" => pg_last_error() == 0,
 		"empresas" => array(
-			"id" => mysql_insert_id(),
+			"id_empresa" => $id,
 			"nome" => $nome
 		)
 	));

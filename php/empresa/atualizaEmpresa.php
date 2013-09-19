@@ -7,16 +7,16 @@
 	$data = json_decode(stripslashes($info));
 
 	$nome = $data->nome;
-	$id = $data->id;
+	$id = $data->id_empresa;
 	 
 	//consulta sql
-	$query = sprintf("UPDATE Empresa SET nome = '%s' WHERE id=%d",
-		mysql_real_escape_string($nome),
-		mysql_real_escape_string($id));
+	$query = sprintf("UPDATE Empresa SET nome_fantasia = '%s' WHERE id_empresa_permissionaria=%d",
+		pg_escape_string($nome),
+		pg_escape_string($id));
 
-	$rs = mysql_query($query);
+	$rs = pg_query($query);
 	 
 	echo json_encode(array(
-		"success" => mysql_errno() == 0
+		"success" => pg_error() == 0
 	));
 ?>

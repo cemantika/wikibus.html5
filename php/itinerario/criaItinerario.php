@@ -1,7 +1,7 @@
 <?php
 	//chama o arquivo de conexão com o bd
 	include("../conectar.php");
-
+//INCOMPLETO
 	$info = $_POST['itinerarios'];
 
 	$data = json_decode(stripslashes($info));
@@ -11,8 +11,8 @@
 	$id_ponto_anterior = isset($data->id_ponto_anterior) ? $data->id_ponto_anterior : 'NULL';
 	$sequencia = isset($data->sequencia) ? $data->sequencia : 'NULL';
 	 
-	$rs = mysql_query("select id_linha from linha WHERE numero = " . $numero);
-	$row = mysql_fetch_row($rs);
+	$rs = pg_query("select id_linha from linha WHERE numero = " . $numero);
+	$row = pg_fetch_row($rs);
 	$id_linha = $row[0];
 	
 	
@@ -23,10 +23,10 @@
 		mysql_real_escape_string($id_ponto_anterior),
 		mysql_real_escape_string($sequencia));
 
-	$rs = mysql_query($query);
+	$rs = pg_query($query);
 	echo $rs . "<br><br>";
 	echo json_encode(array(
-		"success" => mysql_errno() == 0,
+		"success" => pg_error() == 0,
 		"itinerarios" => array(
 			"id" => mysql_insert_id(),
 			"id_linha" => $id_linha,

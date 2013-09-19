@@ -22,7 +22,7 @@ Ext.define('Ubibus.controller.Main', {
             'Onibus',
             'Pontos',
             'Linha',
-            'Usuario'
+            'Usuarios'
         ],
 
         refs: {
@@ -42,8 +42,11 @@ Ext.define('Ubibus.controller.Main', {
         },
 
         control: {
-        	"usuario #btnUsuarioConfirmar": {
+        	"usuario #btnUsuarioLogar": {
                 tap: 'logar'
+            },
+            "usuario #btnUsuarioCadastrar": {
+                tap: 'salvarUsuario'
             },
             "navhome #btnLogout": {
             	tap: 'logout'
@@ -89,12 +92,28 @@ Ext.define('Ubibus.controller.Main', {
 
     logar: function(button, e, options) {
     	//console.log('aqui');
-    	Ext.getCmp('usuarioPort').setHidden(true);
-    	
-    	Ext.getCmp('homePort').setHidden(false);
-    	Ext.getCmp('usuarioPort').setDisabled(true);
-    	Ext.getCmp('homePort').setDisabled(false);
-    	Ext.getCmp('ocorrenciaPort').setDisabled(false);
+    	var emailText = Ext.getCmp('txtUsuarioEmail').getValue();
+        var senhaText = Ext.getCmp('txtUsuarioSenha').getValue();
+        Ext.Ajax.request({
+            url: 'php/usuario/logar.php',
+            method: 'POST',
+            params: {
+                email: emailText,
+                senha: senhaText
+            },
+            callback: function(options, success, response) {
+                idUsuario = response.responseText;
+                if (idUsuario == "NOT_FOUND"){
+                	Ext.getCmp('lblUsuarioStatus').setHtml('Usuario não encontrado!   \/o\\');
+                }else{
+                	Ext.getCmp('usuarioPort').setHidden(true);
+        	    	Ext.getCmp('homePort').setHidden(false);
+        	    	Ext.getCmp('usuarioPort').setDisabled(true);
+        	    	Ext.getCmp('homePort').setDisabled(false);
+        	    	Ext.getCmp('ocorrenciaPort').setDisabled(false);
+                }
+            }
+        });  
     },
     
     logout: function(button, e, options) {
@@ -105,6 +124,54 @@ Ext.define('Ubibus.controller.Main', {
     	Ext.getCmp('usuarioPort').setDisabled(false);
     	Ext.getCmp('homePort').setDisabled(true);
     	Ext.getCmp('ocorrenciaPort').setDisabled(true);
+    },
+    
+    salvarUsuario: function(button, e, eOpts) {
+
+      //Avalia se todos os campos foram preenchidos
+        if ((Ext.getCmp('txtUsuarioNome').getValue()=="")||
+        		(Ext.getCmp('txtUsuarioEmail').getValue()=="")||
+        		(Ext.getCmp('txtUsuarioSenha').getValue()=="")){
+        	
+        	Ext.getCmp('lblUsuarioStatus').setHtml('Todos os Campos devem ser preenchidos!');
+        
+        //Avalia se o dado inserido em "Confirmar Senha" confere com o de "Senha"
+        }else if (Ext.getCmp('txtUsuarioSenha').getValue() != Ext.getCmp('txtUsuarioConfirmarSenha').getValue()){
+        	
+        	Ext.getCmp('lblUsuarioStatus').setHtml('A Confirmação de Senha não confere com a Senha!');
+        
+        }else{
+        	//verifica se o email ja existe no banco
+        	var emailText = Ext.getCmp('txtUsuarioEmail').getValue();
+            Ext.Ajax.request({
+                url: 'php/usuario/buscaUsuario.php',
+                method: 'POST',
+                params: {
+                    email: emailText
+                },
+                callback: function(options, success, response) {
+                    resp = response.responseText;
+                    //Se o email não existe ele insere o usuario
+                    if (resp == "NOT_FOUND"){
+                    	//Cria o model com os dados do usuario a ser cadastrado
+                        var dados = Ext.create('model.usuario', {            
+                            nome: Ext.getCmp('txtUsuarioNome').getValue(),
+                            email: Ext.getCmp('txtUsuarioEmail').getValue(),
+                            senha: Ext.getCmp('txtUsuarioSenha').getValue()
+                        });
+                    	var storeUsuario = Ext.getStore('usuarios');
+                        storeUsuario.removeAll();
+                        storeUsuario.add(dados);
+                        storeUsuario.sync();
+                        Ext.getCmp('lblUsuarioStatus').setHtml('Cadastrado com sucesso!   \\o/');
+                    //Se o email existe ele não insere e retorna o aviso
+                    }else{
+                    	Ext.getCmp('lblUsuarioStatus').setHtml('Email ja existe no Sistema!');
+                    }
+                }
+            });
+        	
+        }
     },
     
     salvarEmpresa: function(button, e, options) {

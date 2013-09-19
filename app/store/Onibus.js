@@ -29,9 +29,9 @@ Ext.define('Ubibus.store.Onibus', {
             type: 'ajax',
             api: {
                 create: 'php/onibus/criaOnibus.php',
-                read: 'php/onibus/listaOnibus.php',
-                update: 'php/onibus/atualizaOnibus.php',
-                destroy: 'php/onibus/deletaOnibus.php'
+                read: 'php/onibus/listaOnibus.php'
+                //update: 'php/onibus/atualizaOnibus.php',
+                //destroy: 'php/onibus/deletaOnibus.php'
             },
             reader: {
                 type: 'json',

@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `wikibus` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `wikibus`;
+CREATE DATABASE  IF NOT EXISTS `wikibustest` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `wikibustest`;
 -- phpMyAdmin SQL Dump
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `wikibus`
+-- Banco de Dados: `wikibustest`
 --
 
 -- --------------------------------------------------------
@@ -29,16 +29,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `empresa` (
-  `id_empresa` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_empresa`)
+  `id_empresa_permissionaria` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_fantasia` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_empresa_permissionaria`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=15 ;
 
 --
 -- Extraindo dados da tabela `empresa`
 --
 
-INSERT INTO `empresa` (`id_empresa`, `nome`) VALUES
+INSERT INTO `empresa` (`id_empresa_permissionaria`, `nome_fantasia`) VALUES
 (1, 'Vitral'),
 (2, 'Joevanza'),
 (3, 'Barramar'),
@@ -235,7 +235,7 @@ INSERT INTO `linha` (`id_linha`, `numero`, `origem`, `destino`, `via`) VALUES
 
 CREATE TABLE IF NOT EXISTS `onibus` (
   `id_onibus` int(11) NOT NULL AUTO_INCREMENT,
-  `id_empresa` int(11) NOT NULL,
+  `id_empresa_permissionaria` int(11) NOT NULL,
   `numero` varchar(10) NOT NULL,
   `adaptado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id_onibus`),
@@ -246,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `onibus` (
 -- Extraindo dados da tabela `onibus`
 --
 
-INSERT INTO `onibus` (`id_onibus`, `id_empresa`, `numero`, `adaptado`) VALUES
+INSERT INTO `onibus` (`id_onibus`, `id_empresa_permissionaria`, `numero`, `adaptado`) VALUES
 (1, 6, '3371', 0),
 (2, 6, '3371', 0),
 (3, 8, '8852', 1),

@@ -1,5 +1,5 @@
 <?php
-//CONEXAO COM BANCO MYSQL
+/*//CONEXAO COM BANCO MYSQL
 //header('Content-Type: text/html; charset=utf-8');
 
 //nome do servidor (127.0.0.1)
@@ -25,13 +25,12 @@ $banco = mysql_select_db($db, $conexao) or die(mysql_error());
 //mysql_query('SET character_set_connection=utf8');
 //mysql_query('SET character_set_client=utf8');
 //mysql_query('SET character_set_results=utf8');
-
-/*
+*/
 //CONEXAO COM BANCO POSTGRES 
 //header('Content-Type: text/html; charset=utf-8');
 
 //nome do servidor (200.128.51.48)
-$servidor = "200.128.51.48";
+$servidor = "localhost";
 
 //porta padrão 5432
 $porta = 5432;
@@ -40,14 +39,14 @@ $porta = 5432;
 $user = "postgres";
 
 //senha do banco de dados
-$senha = "senha";
+$senha = "postgres";
 
 //nome da base de dados
-$db = "ubibus";
+$db = "simtur";
 
 //executa a conexÃ£o com o banco, caso contrÃ¡rio mostra o erro ocorrido
-$conexao = pg_connect("host=$servidor port=$porta dbname=$db " + "user=$user password=$senha");
+$conexao = pg_connect("host=$servidor port=$porta dbname=$db user=$user password=$senha");
 if (!$conexao) {
 die("Não foi possível se conectar ao banco de dados.");
-}*/
+}
 ?>
