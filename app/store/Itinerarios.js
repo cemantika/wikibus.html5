@@ -31,8 +31,8 @@ Ext.define('Ubibus.store.Itinerarios', {
             api: {
                 create: 'php/itinerario/criaItinerario.php',
                 read: 'php/itinerario/listaItinerario.php',
-                update: 'php/itinerario/atualizaItinerario.php',
-                destroy: 'php/itinerario/deletaItinerario.php'
+                //update: 'php/itinerario/atualizaItinerario.php',
+                //destroy: 'php/itinerario/deletaItinerario.php'
             },
             reader: {
                 type: 'json',

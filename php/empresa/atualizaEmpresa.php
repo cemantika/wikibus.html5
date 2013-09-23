@@ -17,6 +17,6 @@
 	$rs = pg_query($query);
 	 
 	echo json_encode(array(
-		"success" => pg_error() == 0
+		"success" => pg_last_error() == 0
 	));
 ?>

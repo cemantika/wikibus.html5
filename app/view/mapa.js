@@ -51,8 +51,7 @@ Ext.define('Ubibus.view.mapa', {
                 var pos = new google.maps.LatLng(position.coords.latitude,
                 position.coords.longitude);
                 latLng = pos;
-                
-                alert(pos);
+
                 //that.placeMarker(pos, gmap);
 
                 var marker = new google.maps.Marker({
@@ -189,10 +188,10 @@ Ext.define('Ubibus.view.mapa', {
             switch(telaAtual){
                 case 'ponto':
 
-                var navHome = Ext.getCmp('home-view');
+                var navHome = Ext.getCmp('homePort');
                 navHome.push({
                     xtype: 'pontodetalhe',
-                    title: 'Ponto nÂº ' + numero
+                    title: 'Ponto nº ' + numero
                 });
 
                 var storeItinerarios = Ext.getStore('itinerarios');

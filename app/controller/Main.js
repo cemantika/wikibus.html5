@@ -455,7 +455,7 @@ Ext.define('Ubibus.controller.Main', {
                     //Desabilita os campos para edição
                     Ext.getCmp('txtLinhaOrigem').setDisabled(true);
                     Ext.getCmp('txtLinhaDestino').setDisabled(true);
-                    Ext.getCmp('txtLinhaVia').setDisabled(true);
+                    //Ext.getCmp('txtLinhaVia').setDisabled(true);
 
                     //Oculta o botão de 'Salvar'
                     Ext.getCmp('btnSalvarLinha').setHidden(true);
@@ -490,7 +490,7 @@ Ext.define('Ubibus.controller.Main', {
                     //Habilita os campos para edição            
                     Ext.getCmp('txtLinhaOrigem').setDisabled(false);
                     Ext.getCmp('txtLinhaDestino').setDisabled(false);
-                    Ext.getCmp('txtLinhaVia').setDisabled(false);
+                    //Ext.getCmp('txtLinhaVia').setDisabled(false);
 
                     //Exibe o botão de 'Salvar'
                     Ext.getCmp('btnSalvarLinha').setHidden(false);

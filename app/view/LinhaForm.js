@@ -126,15 +126,15 @@ Ext.define('Ubibus.view.LinhaForm', {
                                 labelWidth: '45%',
                                 name: 'destino',
                                 placeHolder: 'Destino'
-                            },
-                            {
+                            }
+                            /*{
                                 xtype: 'textfield',
                                 disabled: true,
                                 id: 'txtLinhaVia',
                                 labelWidth: '45%',
                                 name: 'via',
                                 placeHolder: 'Via'
-                            }
+                            }*/
                         ]
                     },
                     {
@@ -182,7 +182,7 @@ Ext.define('Ubibus.view.LinhaForm', {
         //Habilita os campos para edição
         Ext.getCmp('txtLinhaOrigem').setDisabled(habilitaCamposForm);
         Ext.getCmp('txtLinhaDestino').setDisabled(habilitaCamposForm);
-        Ext.getCmp('txtLinhaVia').setDisabled(habilitaCamposForm);
+        //Ext.getCmp('txtLinhaVia').setDisabled(habilitaCamposForm);
 
 
         //Exibe o botão de 'Salvar'

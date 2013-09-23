@@ -29,8 +29,8 @@ Ext.define('Ubibus.store.Usuarios', {
             api: {
                 create: 'php/usuario/criaUsuario.php',
                 read: 'php/usuario/listaUsuario.php',
-                update: 'php/usuario/atualizaUsuario.php',
-                destroy: 'php/usuario/deletaUsuario.php',
+                //update: 'php/usuario/atualizaUsuario.php',
+                //destroy: 'php/usuario/deletaUsuario.php',
             },
             reader: {
                 type: 'json',

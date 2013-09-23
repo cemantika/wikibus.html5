@@ -30,8 +30,8 @@ Ext.define('Ubibus.store.Pontos', {
             api: {
                 create: 'php/ponto/criaPonto.php',
                 read: 'php/ponto/listaPonto.php',
-                update: 'php/ponto/atualizaPonto.php',
-                destroy: 'php/ponto/deletaPonto.php'
+                //update: 'php/ponto/atualizaPonto.php',
+                //destroy: 'php/ponto/deletaPonto.php'
             },
             reader: {
                 type: 'json',

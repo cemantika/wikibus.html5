@@ -6,37 +6,47 @@
 
 	$data = json_decode(stripslashes($info));
 
-	$latitude = $data->latitude;
-	$longitude = $data->longitude;
-	$numero = $data->numero;
-	$logradouro = $data->logradouro;
-	$bairro = $data->bairro;
-	$cidade = $data->cidade;
-	$estado = $data->estado;
-	$pais = $data->pais;	
-	$cep = $data->cep;
-	$referencia = $data->referencia;
+	//cria endereco
+	$tipo = ($data->logradouro . "|" . $data->referencia);;
+	$Sbairro = ($data->cidade . "|" . $data->bairro);
+	$nome = ($data->pais . "|" . $data->estado);
 	
-	//consulta sql
-	$query = sprintf("INSERT INTO ponto (latitude, longitude, numero, logradouro, bairro, cidade, estado, pais, cep, referencia) values (%s, %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
-		mysql_real_escape_string($latitude),
-		mysql_real_escape_string($longitude),
-		mysql_real_escape_string($numero),
-		mysql_real_escape_string($logradouro),
-		mysql_real_escape_string($bairro),
-		mysql_real_escape_string($cidade),
-		mysql_real_escape_string($estado),
-		mysql_real_escape_string($pais),
-		mysql_real_escape_string($cep),
-		mysql_real_escape_string($referencia)		
+	$query = sprintf("INSERT INTO enderecos (id_endereco, nome, bairro, tipo) values (nextval('sq_enderecos'),'%s', '%s', '%s') RETURNING id_endereco",
+			pg_escape_string($nome),
+			pg_escape_string($Sbairro),
+			pg_escape_string($tipo)
+	);
+	
+	$rs = pg_query($query);
+	$row = pg_fetch_row($rs);
+	$idEndereco = $row[0];
+	
+	//cria ponto
+	$descricao_parada = ($data->latitude . "|" . $data->longitude);
+	$nome_parada = ($data->numero . "|" . $data->cep);
+	$adornoGeo = "0101000020E610000000000000000000000000000000000000";
+	
+	$query = sprintf("INSERT INTO paradas (id_parada, id_endereco, nome_parada, localizacao, descricao_parada) values (nextval('sq_paradas'), '%d', '%s', '%s', '%s') RETURNING id_parada",
+		pg_escape_string($idEndereco),
+		pg_escape_string($nome_parada),
+		pg_escape_string($adornoGeo),
+		pg_escape_string($descricao_parada)
 		);
 
-	$rs = mysql_query($query);
-	 
+	$rs = pg_query($query);
+	$row = pg_fetch_row($rs);
+	$idParada = $row[0];
+	
+	list($logradouro, $referencia) = explode("|", $tipo);
+	list($numero, $cep) = explode("|", $nome_parada);
+	list($latitude, $longitude) = explode("|", $descricao_parada);
+	list($cidade, $bairro) = explode("|", $Sbairro);
+	list($pais, $estado) = explode("|", $nome);
+	
 	echo json_encode(array(
-		"success" => mysql_errno() == 0,
-		"empresas" => array(
-			"id" => mysql_insert_id(),
+		"success" => pg_last_error() == 0,
+		"pontos" => array(
+			"id" => $idParada,
 			"latitude" => $latitude,
 			"longitude" => $longitude,
 			"numero" => $numero,

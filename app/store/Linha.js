@@ -29,9 +29,9 @@ Ext.define('Ubibus.store.Linha', {
             type: 'ajax',
             api: {
                 create: 'php/linha/criaLinha.php',
-                read: 'php/linha/listaLinha.php',
-                update: 'php/linha/atualizaLinha.php',
-                destroy: 'php/linha/deletaLinha.php'
+                read: 'php/linha/listaLinha.php'
+                //update: 'php/linha/atualizaLinha.php',
+                //destroy: 'php/linha/deletaLinha.php'
             },
             reader: {
                 type: 'json',

@@ -11,7 +11,7 @@
 
   $rs = pg_query($query);
 	
-  if (pg_num_rows($rs) == 1) {
+  if (pg_num_rows($rs) >= 1) {
     $row = pg_fetch_row($rs);
     echo $row[0];
   } else {

@@ -7,27 +7,28 @@
 	$data = json_decode(stripslashes($info));
 
 	$numero = $data->numero;
-	$origem = $data->origem;
-	$destino = $data->destino;
-	$via = $data->via;
-	 
+	$nome = ($data->origem . "|" . $data->destino);
+	
 	//consulta sql
-	$query = sprintf("INSERT INTO linha (numero, origem, destino, via) VALUES ('%s', '%s', '%s', '%s')",
-		mysql_real_escape_string($numero),
-		mysql_real_escape_string($origem),
-		mysql_real_escape_string($destino),
-		mysql_real_escape_string($via));
+	$query = sprintf("INSERT INTO linhas (id_linha, numero, nome) VALUES (nextval('sq_empresas_permissionarias'), '%s', '%s') RETURNING id_linha",
+		pg_escape_string($numero),
+		pg_escape_string($nome));
 
-	$rs = mysql_query($query);
+	$rs = pg_query($query);
+	$row = pg_fetch_row($rs);
+	$id = $row[0];
+	
+	//algoritmo para identificar os campos "origem" e "destino" a partir do campo "nome" no banco
+	list($origem, $destino) = explode("|", $nome);
+	
 	echo $rs . "<br><br>";
 	echo json_encode(array(
-		"success" => mysql_errno() == 0,
+		"success" => pg_last_error() == 0,
 		"linhas" => array(
-			"id" => mysql_insert_id(),
+			"id" => $id,
 			"numero" => $numero,
 			"origem" => $origem,
-			"destino" => $destino,
-			"via" => $via
+			"destino" => $destino
 		)
 	));
 ?>

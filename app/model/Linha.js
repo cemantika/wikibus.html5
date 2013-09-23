@@ -33,11 +33,11 @@ Ext.define('Ubibus.model.Linha', {
             {
                 name: 'destino',
                 type: 'string'
-            },
-            {
+            }
+            /*{
                 name: 'via',
                 type: 'string'
-            }
+            }*/
         ]
     }
 });
