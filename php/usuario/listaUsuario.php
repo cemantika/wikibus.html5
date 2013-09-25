@@ -5,12 +5,12 @@
 	$condicao = isset($_GET['nome']) ? sprintf(" AND nome='%s' ", $_GET['nome']) : ''; 
 	
 	//consulta sql
-	$query = mysql_query("SELECT * FROM usuario WHERE (1=1) " . $condicao) or die(mysql_error());
+	$query = pg_query("SELECT * FROM usuarios WHERE (1=1) " . $condicao) or die(pg_last_error());
 	 
 	//faz um looping e cria um array com os campos da consulta
-	$rows = array('usuario' => array());
-	while($dados = mysql_fetch_assoc($query)) {
-	    $rows['usuario'][] = $dados;
+	$rows = array('usuarios' => array());
+	while($dados = pg_fetch_assoc($query)) {
+	    $rows['usuarios'][] = $dados;
 	}
 
 	//encoda para formato JSON
