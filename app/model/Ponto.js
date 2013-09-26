@@ -43,7 +43,7 @@ Ext.define('Ubibus.model.Ponto', {
                 name: 'bairro',
                 type: 'string'
             },
-            {
+            /*{
                 name: 'cidade',
                 type: 'string'
             },
@@ -54,7 +54,7 @@ Ext.define('Ubibus.model.Ponto', {
             {
                 name: 'pais',
                 type: 'string'
-            },
+            },*/
             {
                 name: 'referencia',
                 type: 'string'
