@@ -19,10 +19,10 @@ Ext.define('Ubibus.model.Itinerario', {
 
     config: {
         fields: [
-            {
+            /*{
                 name: 'id_itinerario',
                 type: 'int'
-            },
+            },*/
             {
                 name: 'id_linha',
                 type: 'int'
@@ -42,8 +42,8 @@ Ext.define('Ubibus.model.Itinerario', {
             {
                 name: 'numero',
                 type: 'string'
-            },
-            {
+            }
+            /*{
                 name: 'origem',
                 type: 'string'
             },
@@ -54,7 +54,7 @@ Ext.define('Ubibus.model.Itinerario', {
             {
                 name: 'via',
                 type: 'string'
-            }
+            }*/
         ]
     }
 });

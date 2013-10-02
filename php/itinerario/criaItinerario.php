@@ -10,17 +10,22 @@
 	$id_ponto = $data->id_ponto;
 	$id_ponto_anterior = isset($data->id_ponto_anterior) ? $data->id_ponto_anterior : 'NULL';
 	$sequencia = isset($data->sequencia) ? $data->sequencia : 'NULL';
+	$adorno = 0;
 	 
-	$rs = pg_query("SELECT id_linha from linhas WHERE numero = " . $numero);
+	$query = sprintf("SELECT id_linha from linhas WHERE numero = '%s'", 
+			pg_escape_string($numero)
+	);
+	$rs = pg_query($query);
 	$row = pg_fetch_row($rs);
 	$id_linha = $row[0];
 
 	//consulta sql
-	$query = sprintf("INSERT INTO linhas_paradas (id_linhas, id_paradas, parada_anterior, proxima_parada) VALUES ('%d', '%d', '%d', '%d')",
+	$query = sprintf("INSERT INTO linhas_paradas (id_linhas, id_paradas, parada_anterior, proxima_parada, ordem_parada) VALUES ('%d', '%d', '%d', '%d', '%d')",
 		pg_escape_string($id_linha),
 		pg_escape_string($id_ponto),
 		pg_escape_string($id_ponto_anterior),
-		pg_escape_string($sequencia));
+		pg_escape_string($sequencia),
+		pg_escape_string($adorno));
 
 	$rs = pg_query($query);
 	echo $rs . "<br><br>";

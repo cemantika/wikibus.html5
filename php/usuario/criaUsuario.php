@@ -13,7 +13,6 @@
 	$adornoDate = "2013-09-17";
 	$adornoGeo = "0101000020E610000000000000000000000000000000000000";
 	
-	
 	//consulta sql
 	$query = sprintf("INSERT INTO usuarios (id_usuario, nome_usuario, email, senha, login, data_ingresso, data_ultimo_acesso, localizacao, data_nascimento, ativo) values (nextval('sq_usuarios'),'%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%d') RETURNING id_usuario", 
 		pg_escape_string($nome),

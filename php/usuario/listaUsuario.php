@@ -5,7 +5,7 @@
 	$condicao = isset($_GET['nome']) ? sprintf(" AND nome='%s' ", $_GET['nome']) : ''; 
 	
 	//consulta sql
-	$query = pg_query("SELECT * FROM usuarios WHERE (1=1) " . $condicao) or die(pg_last_error());
+	$query = pg_query("SELECT nome, email, senha FROM usuarios" . $condicao) or die(pg_last_error());
 	 
 	//faz um looping e cria um array com os campos da consulta
 	$rows = array('usuarios' => array());
