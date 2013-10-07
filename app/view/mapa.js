@@ -76,33 +76,34 @@ Ext.define('Ubibus.view.mapa', {
         myListener = google.maps.event.addListener(gmap, 'click', function(event) {
 
             podeAdicionar = Ext.getCmp('opcoesMapaPonto').isPressed(Ext.getCmp('btnAtivaAdicao'));
-
-            if(podeAdicionar){        
-
-                //Exibe promp de confirmaÃ§Ã£o
-                Ext.Msg.prompt(null, 
-                'Informe uma referencia:',
-                function(btn, text){
-                    if(btn == 'ok'){
-
-                        var lat = event.latLng.lat();
-                        var lng = event.latLng.lng();
-                        latLng = new google.maps.LatLng(lat, lng);
-
-                        var marcador = that.placeMarker(latLng, gmap, '');
-
-                        that.geoCodePosition(latLng, text);
-
-                        markers.push(marcador);
-
-                    }
-                },
-                this, false, '', {placeHolder: 'Ex: Ponto do Shopping...'});
-
-
-            }else{
-                //alert('NO');
-            }
+            
+            CurrentUser = Ext.getCmp('btnLogout').getText();
+            if(CurrentUser!="Logar"){
+	            if(podeAdicionar){        
+	
+	                //Exibe promp de confirmaÃ§Ã£o
+	                Ext.Msg.prompt(null, 
+	                'Informe uma referencia:',
+	                function(btn, text){
+	                    if(btn == 'ok'){
+	                        var lat = event.latLng.lat();
+	                        var lng = event.latLng.lng();
+	                        latLng = new google.maps.LatLng(lat, lng);
+	
+	                        var marcador = that.placeMarker(latLng, gmap, '');
+	
+	                        that.geoCodePosition(latLng, text);
+	
+	                        markers.push(marcador);
+	
+	                    }
+	                },
+	                this, false, '', {placeHolder: 'Ex: Ponto do Shopping...'});
+	
+	
+	            }
+            }else
+    			alert("Usuarios anonimos nao podem contribuir, crie uma conta :)");
         });
 
         google.maps.event.addListener(gmap, 'idle', function(event) {

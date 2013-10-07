@@ -43,7 +43,7 @@ Ext.define('Ubibus.view.NavHome', {
 				    itemId: 'mybutton34',
 				    iconCls: 'arrow_left',
 				    iconMask: true,
-				    text: 'Logout'
+				    text: 'Logar'
 				},
                 {
                     xtype: 'button',

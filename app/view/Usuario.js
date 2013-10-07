@@ -126,7 +126,6 @@ Ext.define('Ubibus.view.Usuario', {
             Ext.getCmp('txtUsuarioConfirmarSenha').setHidden(true);
             Ext.getCmp('btnUsuarioLogar').setHidden(false);
             Ext.getCmp('btnUsuarioCadastrar').setHidden(true);
-            //Ext.getCmp('btnUsuarioConfirmar').setText('Logar');
 
             break;
 
@@ -135,7 +134,6 @@ Ext.define('Ubibus.view.Usuario', {
             Ext.getCmp('txtUsuarioConfirmarSenha').setHidden(false);
             Ext.getCmp('btnUsuarioLogar').setHidden(true);
             Ext.getCmp('btnUsuarioCadastrar').setHidden(false);
-            //Ext.getCmp('btnUsuarioConfirmar').setText('Cadastrar');
 
             break;
 

@@ -102,27 +102,33 @@ Ext.define('Ubibus.controller.Main', {
                 senha: senhaText
             },
             callback: function(options, success, response) {
-                idUsuario = response.responseText;
-                if (idUsuario == "NOT_FOUND"){
+            	CurrentUser = response.responseText;
+                if (CurrentUser == "NOT_FOUND"){
                 	Ext.getCmp('lblUsuarioStatus').setHtml('Usuario n�o encontrado!   \/o\\');
                 }else{
+                	//Ext.getCmp('btnAtivaAdicao').setDisabled(false);
+                	Ext.getCmp('btnNavAdicionarEmpresa').setDisabled(false);
+                	Ext.getCmp('btnLogout').setText(CurrentUser + ' logout');
                 	Ext.getCmp('usuarioPort').setHidden(true);
         	    	Ext.getCmp('homePort').setHidden(false);
         	    	Ext.getCmp('usuarioPort').setDisabled(true);
-        	    	Ext.getCmp('homePort').setDisabled(false);
-        	    	Ext.getCmp('ocorrenciaPort').setDisabled(false);
+        	    	//Ext.getCmp('homePort').setDisabled(false);
+        	    	//Ext.getCmp('ocorrenciaPort').setDisabled(false);
                 }
             }
         });  
     },
     
     logout: function(button, e, options) {
-    	//console.log('aqui');
-    	Ext.getCmp('usuarioPort').setHidden(false);
     	
+    	//Ext.getCmp('btnAtivaAdicao').setDisabled(true);
+    	CurrentUser = "";
+    	Ext.getCmp('btnNavAdicionarEmpresa').setDisabled(true);
+    	Ext.getCmp('usuarioPort').setHidden(false);
+    	Ext.getCmp('btnLogout').setText('Logar');
     	Ext.getCmp('homePort').setHidden(true);
     	Ext.getCmp('usuarioPort').setDisabled(false);
-    	Ext.getCmp('homePort').setDisabled(true);
+    	//Ext.getCmp('homePort').setDisabled(true);
     	Ext.getCmp('ocorrenciaPort').setDisabled(true);
     },
     
@@ -175,151 +181,160 @@ Ext.define('Ubibus.controller.Main', {
     },
     
     salvarEmpresa: function(button, e, options) {
-        Ext.Msg.prompt(null, 
-        'Cadastre uma empresa:',
-        function(btn, text){
-            if(btn == 'ok'){
-
-                //Cria o model com os dados da empresa a ser cadastrada
-                var dados = Ext.create('model.empresa', {            
-                    nome: text
-                });
-
-                //Cria uma instancia da store
-                //var store = Ext.create('store.empresas');
-
-                //Adiciona o model a store e envia pro servidor
-                //store.add(dados);
-                //store.sync();
-
-                //Adicionao o model a lista que é exibida na tela
-                //this.getEmpresa().getStore().add(dados);
-                //this.getEmpresa().getStore().load();
-
-                var storeEmpresas = Ext.getStore('empresa');
-                storeEmpresas.removeAll();
-                storeEmpresas.add(dados);
-                storeEmpresas.sync();
-                storeEmpresas.load();
-
-            }
-        },
-        this, false, '', {placeHolder: 'Nome da empresa'});
+    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+	    	Ext.Msg.prompt(null, 
+	        'Cadastre uma empresa:',
+	        function(btn, text){
+	    		if(btn == 'ok'){
+	
+	                //Cria o model com os dados da empresa a ser cadastrada
+	                var dados = Ext.create('model.empresa', {            
+	                    nome: text
+	                });
+	
+	                //Cria uma instancia da store
+	                //var store = Ext.create('store.empresas');
+	
+	                //Adiciona o model a store e envia pro servidor
+	                //store.add(dados);
+	                //store.sync();
+	
+	                //Adicionao o model a lista que é exibida na tela
+	                //this.getEmpresa().getStore().add(dados);
+	                //this.getEmpresa().getStore().load();
+	
+	                var storeEmpresas = Ext.getStore('empresa');
+	                storeEmpresas.removeAll();
+	                storeEmpresas.add(dados);
+	                storeEmpresas.sync();
+	                storeEmpresas.load();
+	
+	            }
+	        },
+	        this, false, '', {placeHolder: 'Nome da empresa'});
+	    }else
+			alert("Usuarios anonimos nao podem contribuir, crie uma conta :)");
     },
 
     salvarOnibus: function(button, e, options) {
-        var dadosOnibus = this.getOnibusForm().getValues();
-        var storeOnibus = Ext.getStore('onibus');
-
-        var editar = Ext.getCmp('opcoesOnibus').isPressed(Ext.getCmp('btnOnibusEditar'));
-
-        //O framework passa 'null' ao inves de 'false' caso o checkbox não seja selecionado
-        //Este valor é corrijido antes de ser enviado para o servidor
-        dadosOnibus.adaptado = ((dadosOnibus.adaptado) ? true : false);
-
-        //limpa o store antes de enviar os dados
-        storeOnibus.removeAll();
-
-
-        if(editar){
-            //storeOnibus.set(dadosOnibus);?? //TODO:update
-
-            //Altera o campo instructions do fieldset
-            //Ext.getCmp('fieldPesquisaOnibus').setInstructions('Atualizado com sucesso!   \\o/');
-            Ext.getCmp('lblOnibusStatusPesquisa').setHtml('Atualizado com sucesso!   \\o/');
-
-            //Exibe os botões de 'opções'
-            Ext.getCmp('opcoesOnibus').setHidden(false);
-
-            //Habilita os botões de 'opções'
-            Ext.getCmp('btnOnibusLocalizacao').setDisabled(false);
-            Ext.getCmp('btnOnibusOcorrencia').setDisabled(false);
-            Ext.getCmp('btnOnibusEditar').setDisabled(false);
-            Ext.getCmp('btnOnibusDetalhe').setDisabled(false);
-
-            //Exibe o botão de 'Salvar'
-            Ext.getCmp('btnSalvarOnibus').setHidden(true);
-
-            //Desmarca o botão de 'editar'
-            Ext.getCmp('opcoesOnibus').setPressedButtons(Ext.getCmp('btnOnibusHidden'));
-        }else{
-            //adiciona dados e envia pro servidor
-            storeOnibus.add(dadosOnibus);
-
-            //Altera o campo instructions do fieldset
-            //Ext.getCmp('fieldPesquisaOnibus').setInstructions('Cadastrado com sucesso!   \\o/');
-            Ext.getCmp('lblOnibusStatusPesquisa').setHtml('Cadastrado com sucesso!   \\o/');
-
-            //Exibe os botões de 'opções'
-            Ext.getCmp('opcoesOnibus').setHidden(false);
-
-            //Habilita os botões de 'opções'
-            Ext.getCmp('btnOnibusLocalizacao').setDisabled(false);
-            Ext.getCmp('btnOnibusOcorrencia').setDisabled(false);
-            Ext.getCmp('btnOnibusEditar').setDisabled(false);
-            Ext.getCmp('btnOnibusDetalhe').setDisabled(false);
-
-            //Oculta o botão de 'Salvar'
-            Ext.getCmp('btnSalvarOnibus').setHidden(true);
-
-        }
-        storeOnibus.sync();
+    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+	        var dadosOnibus = this.getOnibusForm().getValues();
+	        var storeOnibus = Ext.getStore('onibus');
+	
+	        var editar = Ext.getCmp('opcoesOnibus').isPressed(Ext.getCmp('btnOnibusEditar'));
+	
+	        //O framework passa 'null' ao inves de 'false' caso o checkbox não seja selecionado
+	        //Este valor é corrijido antes de ser enviado para o servidor
+	        dadosOnibus.adaptado = ((dadosOnibus.adaptado) ? true : false);
+	
+	        //limpa o store antes de enviar os dados
+	        storeOnibus.removeAll();
+	
+	
+	        if(editar){
+	            //storeOnibus.set(dadosOnibus);?? //TODO:update
+	
+	            //Altera o campo instructions do fieldset
+	            //Ext.getCmp('fieldPesquisaOnibus').setInstructions('Atualizado com sucesso!   \\o/');
+	            Ext.getCmp('lblOnibusStatusPesquisa').setHtml('Atualizado com sucesso!   \\o/');
+	
+	            //Exibe os botões de 'opções'
+	            Ext.getCmp('opcoesOnibus').setHidden(false);
+	
+	            //Habilita os botões de 'opções'
+	            Ext.getCmp('btnOnibusLocalizacao').setDisabled(false);
+	            Ext.getCmp('btnOnibusOcorrencia').setDisabled(false);
+	            Ext.getCmp('btnOnibusEditar').setDisabled(false);
+	            Ext.getCmp('btnOnibusDetalhe').setDisabled(false);
+	
+	            //Exibe o botão de 'Salvar'
+	            Ext.getCmp('btnSalvarOnibus').setHidden(true);
+	
+	            //Desmarca o botão de 'editar'
+	            Ext.getCmp('opcoesOnibus').setPressedButtons(Ext.getCmp('btnOnibusHidden'));
+	        }else{
+	            //adiciona dados e envia pro servidor
+	            storeOnibus.add(dadosOnibus);
+	
+	            //Altera o campo instructions do fieldset
+	            //Ext.getCmp('fieldPesquisaOnibus').setInstructions('Cadastrado com sucesso!   \\o/');
+	            Ext.getCmp('lblOnibusStatusPesquisa').setHtml('Cadastrado com sucesso!   \\o/');
+	
+	            //Exibe os botões de 'opções'
+	            Ext.getCmp('opcoesOnibus').setHidden(false);
+	
+	            //Habilita os botões de 'opções'
+	            Ext.getCmp('btnOnibusLocalizacao').setDisabled(false);
+	            Ext.getCmp('btnOnibusOcorrencia').setDisabled(false);
+	            Ext.getCmp('btnOnibusEditar').setDisabled(false);
+	            Ext.getCmp('btnOnibusDetalhe').setDisabled(false);
+	
+	            //Oculta o botão de 'Salvar'
+	            Ext.getCmp('btnSalvarOnibus').setHidden(true);
+	
+	        }
+	        storeOnibus.sync();
+    	}else
+			alert("Usuarios anonimos nao podem contribuir, crie uma conta :)")
     },
 
     salvarLinha: function(button, e, options) {
-        var dadosLinha = this.getLinhaForm().getValues();
-
-        var storeLinha = Ext.getStore('linha');
-
-        var editar = Ext.getCmp('opcoesLinha').isPressed(Ext.getCmp('btnLinhaEditar'));
-
-        //limpa o store antes de enviar os dados
-        storeLinha.removeAll();
-
-
-        if(editar){
-            //storeLinha.set(dadosLinha);?? //TODO:update
-
-            //Altera o campo instructions do fieldset
-            //Ext.getCmp('fieldPesquisaLinha').setInstructions('Atualizado com sucesso!   \\o/');
-            Ext.getCmp('lblLinhaStatusPesquisa').setHtml('Atualizado com sucesso!   \\o/');
-
-            //Exibe os botões de 'opções'
-            Ext.getCmp('opcoesLinha').setHidden(false);
-
-            //Habilita os botões de 'opções'
-            Ext.getCmp('btnLinhaLocalizacao').setDisabled(false);
-            Ext.getCmp('btnLinhaOcorrencia').setDisabled(false);
-            Ext.getCmp('btnLinhaEditar').setDisabled(false);
-            Ext.getCmp('btnLinhaDetalhe').setDisabled(false);
-
-            //Exibe o botão de 'Salvar'
-            Ext.getCmp('btnSalvarLinha').setHidden(true);
-
-            //Desmarca o botão de 'editar'
-            Ext.getCmp('opcoesLinha').setPressedButtons(Ext.getCmp('btnLinhaHidden'));
-        }else{
-            //adiciona dados e envia pro servidor
-            storeLinha.add(dadosLinha);
-
-            //Altera o campo instructions do fieldset
-            //Ext.getCmp('fieldPesquisaLinha').setInstructions('Cadastrado com sucesso!   \\o/');
-            Ext.getCmp('lblLinhaStatusPesquisa').setHtml('Cadastrado com sucesso!   \\o/');
-
-            //Exibe os botões de 'opções'
-            Ext.getCmp('opcoesLinha').setHidden(false);
-
-            //Habilita os botões de 'opções'
-            Ext.getCmp('btnLinhaLocalizacao').setDisabled(false);
-            Ext.getCmp('btnLinhaOcorrencia').setDisabled(false);
-            Ext.getCmp('btnLinhaEditar').setDisabled(false);
-            Ext.getCmp('btnLinhaDetalhe').setDisabled(false);
-
-            //Oculta o botão de 'Salvar'
-            Ext.getCmp('btnSalvarLinha').setHidden(true);
-
-        }
-        storeLinha.sync();
+    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+	        var dadosLinha = this.getLinhaForm().getValues();
+	
+	        var storeLinha = Ext.getStore('linha');
+	
+	        var editar = Ext.getCmp('opcoesLinha').isPressed(Ext.getCmp('btnLinhaEditar'));
+	
+	        //limpa o store antes de enviar os dados
+	        storeLinha.removeAll();
+	
+	
+	        if(editar){
+	            //storeLinha.set(dadosLinha);?? //TODO:update
+	
+	            //Altera o campo instructions do fieldset
+	            //Ext.getCmp('fieldPesquisaLinha').setInstructions('Atualizado com sucesso!   \\o/');
+	            Ext.getCmp('lblLinhaStatusPesquisa').setHtml('Atualizado com sucesso!   \\o/');
+	
+	            //Exibe os botões de 'opções'
+	            Ext.getCmp('opcoesLinha').setHidden(false);
+	
+	            //Habilita os botões de 'opções'
+	            Ext.getCmp('btnLinhaLocalizacao').setDisabled(false);
+	            Ext.getCmp('btnLinhaOcorrencia').setDisabled(false);
+	            Ext.getCmp('btnLinhaEditar').setDisabled(false);
+	            Ext.getCmp('btnLinhaDetalhe').setDisabled(false);
+	
+	            //Exibe o botão de 'Salvar'
+	            Ext.getCmp('btnSalvarLinha').setHidden(true);
+	
+	            //Desmarca o botão de 'editar'
+	            Ext.getCmp('opcoesLinha').setPressedButtons(Ext.getCmp('btnLinhaHidden'));
+	        }else{
+	            //adiciona dados e envia pro servidor
+	            storeLinha.add(dadosLinha);
+	
+	            //Altera o campo instructions do fieldset
+	            //Ext.getCmp('fieldPesquisaLinha').setInstructions('Cadastrado com sucesso!   \\o/');
+	            Ext.getCmp('lblLinhaStatusPesquisa').setHtml('Cadastrado com sucesso!   \\o/');
+	
+	            //Exibe os botões de 'opções'
+	            Ext.getCmp('opcoesLinha').setHidden(false);
+	
+	            //Habilita os botões de 'opções'
+	            Ext.getCmp('btnLinhaLocalizacao').setDisabled(false);
+	            Ext.getCmp('btnLinhaOcorrencia').setDisabled(false);
+	            Ext.getCmp('btnLinhaEditar').setDisabled(false);
+	            Ext.getCmp('btnLinhaDetalhe').setDisabled(false);
+	
+	            //Oculta o botão de 'Salvar'
+	            Ext.getCmp('btnSalvarLinha').setHidden(true);
+	
+	        }
+	        storeLinha.sync();
+    	}else
+			alert("Usuarios anonimos nao podem contribuir, crie uma conta :)")
     },
 
     pesquisarOnibus: function(button, e, options) {

@@ -39,7 +39,7 @@ Ext.define('Ubibus.view.Viewport', {
             {
 				id: 'homePort',
                 xtype: 'navhome',
-                disabled: true,
+                //disabled: true,
                 iconCls: 'home'
             },
             {

@@ -4,7 +4,7 @@
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
-  $query = sprintf("SELECT id_usuario FROM usuarios WHERE email = '%s' AND senha = '%s'",
+  $query = sprintf("SELECT nome_usuario FROM usuarios WHERE (email = '%s' AND senha = '%s')",
     pg_escape_string($email),
     pg_escape_string($senha)
   );
