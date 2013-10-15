@@ -45,7 +45,7 @@ Ext.define('Ubibus.view.Viewport', {
             {
             	id: 'ocorrenciaPort',
                 xtype: 'ocorrencia',
-                disabled: true,
+                hidden: true,
                 title: 'Ocorrência',
                 iconCls: 'info'
             },

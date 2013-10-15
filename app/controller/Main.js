@@ -102,13 +102,14 @@ Ext.define('Ubibus.controller.Main', {
                 senha: senhaText
             },
             callback: function(options, success, response) {
-            	CurrentUser = response.responseText;
-                if (CurrentUser == "NOT_FOUND"){
+            	Ext.getCmp('CurrentUser').setText(response.responseText);
+            	
+            	var currentUser = Ext.getCmp('CurrentUser').getText().split("|");
+                
+            	if (currentUser[0] == "NOT_FOUND"){
                 	Ext.getCmp('lblUsuarioStatus').setHtml('Usuario não encontrado!   \/o\\');
                 }else{
-                	//Ext.getCmp('btnAtivaAdicao').setDisabled(false);
-                	Ext.getCmp('btnNavAdicionarEmpresa').setDisabled(false);
-                	Ext.getCmp('btnLogout').setText(CurrentUser + ' logout');
+                	Ext.getCmp('btnLogout').setText(currentUser[1] + ' | Logout');
                 	Ext.getCmp('usuarioPort').setHidden(true);
         	    	Ext.getCmp('homePort').setHidden(false);
         	    	Ext.getCmp('usuarioPort').setDisabled(true);
@@ -121,15 +122,13 @@ Ext.define('Ubibus.controller.Main', {
     
     logout: function(button, e, options) {
     	
-    	//Ext.getCmp('btnAtivaAdicao').setDisabled(true);
-    	CurrentUser = "";
-    	Ext.getCmp('btnNavAdicionarEmpresa').setDisabled(true);
+    	Ext.getCmp('CurrentUser').setText("");
     	Ext.getCmp('usuarioPort').setHidden(false);
     	Ext.getCmp('btnLogout').setText('Logar');
     	Ext.getCmp('homePort').setHidden(true);
     	Ext.getCmp('usuarioPort').setDisabled(false);
     	//Ext.getCmp('homePort').setDisabled(true);
-    	Ext.getCmp('ocorrenciaPort').setDisabled(true);
+    	//Ext.getCmp('ocorrenciaPort').setDisabled(true);
     },
     
     salvarUsuario: function(button, e, eOpts) {
@@ -181,7 +180,7 @@ Ext.define('Ubibus.controller.Main', {
     },
     
     salvarEmpresa: function(button, e, options) {
-    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+    	if(Ext.getCmp('CurrentUser').getText() != ""){
 	    	Ext.Msg.prompt(null, 
 	        'Cadastre uma empresa:',
 	        function(btn, text){
@@ -217,7 +216,7 @@ Ext.define('Ubibus.controller.Main', {
     },
 
     salvarOnibus: function(button, e, options) {
-    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+    	if(Ext.getCmp('CurrentUser').getText() != ""){
 	        var dadosOnibus = this.getOnibusForm().getValues();
 	        var storeOnibus = Ext.getStore('onibus');
 	
@@ -279,7 +278,7 @@ Ext.define('Ubibus.controller.Main', {
     },
 
     salvarLinha: function(button, e, options) {
-    	if((typeof CurrentUser != 'undefined')&&(CurrentUser!="")){
+    	if(Ext.getCmp('CurrentUser').getText() != ""){
 	        var dadosLinha = this.getLinhaForm().getValues();
 	
 	        var storeLinha = Ext.getStore('linha');

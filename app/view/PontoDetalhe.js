@@ -56,6 +56,7 @@ Ext.define('Ubibus.view.PontoDetalhe', {
                         xtype: 'button',
                         id: 'btnPontoOcorrencia',
                         iconCls: 'info',
+                        hidden: true,
                         iconMask: true,
                         text: ''
                     },

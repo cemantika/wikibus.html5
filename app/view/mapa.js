@@ -77,8 +77,8 @@ Ext.define('Ubibus.view.mapa', {
 
             podeAdicionar = Ext.getCmp('opcoesMapaPonto').isPressed(Ext.getCmp('btnAtivaAdicao'));
             
-            CurrentUser = Ext.getCmp('btnLogout').getText();
-            if(CurrentUser!="Logar"){
+            user = Ext.getCmp('CurrentUser').getText();
+            if(user!=""){
 	            if(podeAdicionar){        
 	
 	                //Exibe promp de confirmaÃ§Ã£o

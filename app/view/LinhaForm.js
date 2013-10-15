@@ -54,6 +54,7 @@ Ext.define('Ubibus.view.LinhaForm', {
                                 id: 'btnLinhaOcorrencia',
                                 badgeText: '',
                                 iconCls: 'info',
+                                hidden: true,
                                 iconMask: true,
                                 text: ''
                             },

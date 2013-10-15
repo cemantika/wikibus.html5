@@ -22,7 +22,7 @@ Ext.define('Ubibus.view.NavHome', {
     ],
 
     config: {
-        title: 'Ubibus',
+        title: 'WikiBus',
         id: 'home-view',
         ui: '',
         defaultBackButtonText: 'Voltar',
@@ -30,12 +30,17 @@ Ext.define('Ubibus.view.NavHome', {
         items: [
             {
                 xtype: 'menu',
-                title: 'Ubibus'
+                title: 'WikiBus'
             }
         ],
         navigationBar: {
             id: 'navHomeBar',
             items: [
+				{
+				    id: 'CurrentUser',
+				    hidden: true,
+				    text: ""
+				},
 				{
 				    xtype: 'button',
 				    align: 'right',

@@ -52,6 +52,7 @@ Ext.define('Ubibus.view.OnibusForm', {
                                 xtype: 'button',
                                 id: 'btnOnibusOcorrencia',
                                 iconCls: 'info',
+                                hidden: true,
                                 iconMask: true,
                                 text: ''
                             },
