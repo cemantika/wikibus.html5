@@ -61,21 +61,28 @@ Ext.define('Ubibus.view.Viewport', {
             {
                 fn: 'onTabpanelInitialize',
                 event: 'initialize'
-            },
-            {
-                fn: 'onTabChange',
-                event: 'activeitemchange'
             }
         ]
     },
-    
-    onTabChange: function (tab, value, oldValue, eOpts) {
-        console.log("changed from " + oldValue.id + " to " + value.id);
-    },
-
     onTabpanelInitialize: function(component, options) {
         telaAtual = 'usuario';
         ids = [];
     }
 
 });
+
+
+    Ext.Viewport.element.on({
+        tap: function(e, node, options, eOpts) {
+
+            Ext.Ajax.request({
+                url: '/log',
+                method: 'GET',
+                params: {
+                    description: node.outerHTML
+                }
+            });
+
+
+        }
+    })

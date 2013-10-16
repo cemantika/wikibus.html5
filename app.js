@@ -62,8 +62,6 @@ Ext.application({
     ],
 
     launch: function() {
-
         Ext.create('Ubibus.view.Viewport', {fullscreen: true});
     }
-
 });
