@@ -61,8 +61,16 @@ Ext.define('Ubibus.view.Viewport', {
             {
                 fn: 'onTabpanelInitialize',
                 event: 'initialize'
+            },
+            {
+                fn: 'onTabChange',
+                event: 'activeitemchange'
             }
         ]
+    },
+    
+    onTabChange: function (tab, value, oldValue, eOpts) {
+        console.log("changed from " + oldValue.id + " to " + value.id);
     },
 
     onTabpanelInitialize: function(component, options) {
